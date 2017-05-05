@@ -8,6 +8,16 @@
 
 import UIKit
 
-class PostCell: UITableViewCell {
-
+class PostCell: UITableViewCell, TextPresentable {
+    
+    @IBOutlet weak var postTitleLabel: UILabel!
+    @IBOutlet weak var postBodyLabel: UILabel!
+    
+    func setUp(_ post: Post) {
+        postTitleLabel.text = post.title
+        postTitleLabel.textColor = textColor
+        postBodyLabel.text = post.body
+        postBodyLabel.font = textFont
+    }
+    
 }

@@ -21,6 +21,8 @@ class HomeTableViewController: UITableViewController {
             case .success(let postsResult):
                     self?.posts = postsResult ?? []
                     self?.tableView.reloadData()
+                    self?.tableView.estimatedRowHeight = 120.0
+                    self?.tableView.rowHeight = UITableViewAutomaticDimension
             case .error(let error):
                     print("\(error)")
             }
@@ -38,7 +40,15 @@ class HomeTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "homecell", for: indexPath)
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "postcell", for: indexPath) as? PostCell else {
+            fatalError()
+        }
+        
+        let post = posts[indexPath.row]
+        
+        cell.setUp(post)
+        
         return cell
     }
 
