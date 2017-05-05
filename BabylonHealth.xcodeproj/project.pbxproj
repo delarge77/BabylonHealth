@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		879C2E2B1EBCEEDC00986674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E2A1EBCEEDC00986674 /* AppDelegate.swift */; };
-		879C2E2D1EBCEEDC00986674 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E2C1EBCEEDC00986674 /* ViewController.swift */; };
+		4CF51A02AF62EE77662106CD /* Pods_BabylonHealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0812829645EF7496387C8018 /* Pods_BabylonHealth.framework */; };
 		879C2E301EBCEEDC00986674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879C2E2E1EBCEEDC00986674 /* Main.storyboard */; };
 		879C2E321EBCEEDC00986674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879C2E311EBCEEDC00986674 /* Assets.xcassets */; };
 		879C2E351EBCEEDC00986674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879C2E331EBCEEDC00986674 /* LaunchScreen.storyboard */; };
 		879C2E401EBCEEDC00986674 /* BabylonHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E3F1EBCEEDC00986674 /* BabylonHealthTests.swift */; };
 		879C2E4B1EBCEEDC00986674 /* BabylonHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E4A1EBCEEDC00986674 /* BabylonHealthUITests.swift */; };
+		879C2E5B1EBCF07B00986674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E5A1EBCF07B00986674 /* AppDelegate.swift */; };
+		879C2E631EBCF1E000986674 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E621EBCF1E000986674 /* HomeTableViewController.swift */; };
+		BE4197C9424ABE23278F95EA /* Pods_BabylonHealthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A35F7A85B8431810BA4B7 /* Pods_BabylonHealthUITests.framework */; };
+		C53F2D91E7AC1916D3AA1156 /* Pods_BabylonHealthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 108C0097667ADE6D96B573F5 /* Pods_BabylonHealthTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0812829645EF7496387C8018 /* Pods_BabylonHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabylonHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		08B6A075B6E353AE21D59545 /* Pods-BabylonHealthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonHealthTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonHealthTests/Pods-BabylonHealthTests.release.xcconfig"; sourceTree = "<group>"; };
+		0BD27EEACA4F42FE2FD1BF05 /* Pods-BabylonHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonHealth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonHealth/Pods-BabylonHealth.debug.xcconfig"; sourceTree = "<group>"; };
+		108C0097667ADE6D96B573F5 /* Pods_BabylonHealthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabylonHealthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		667A35F7A85B8431810BA4B7 /* Pods_BabylonHealthUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabylonHealthUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8242FF12225FA4CC97F18F58 /* Pods-BabylonHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonHealth.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonHealth/Pods-BabylonHealth.release.xcconfig"; sourceTree = "<group>"; };
+		85BB6E49AC674724BB310D05 /* Pods-BabylonHealthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonHealthUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonHealthUITests/Pods-BabylonHealthUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		879C2E271EBCEEDC00986674 /* BabylonHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabylonHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		879C2E2A1EBCEEDC00986674 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		879C2E2C1EBCEEDC00986674 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		879C2E2F1EBCEEDC00986674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		879C2E311EBCEEDC00986674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		879C2E341EBCEEDC00986674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +55,10 @@
 		879C2E461EBCEEDC00986674 /* BabylonHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabylonHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		879C2E4A1EBCEEDC00986674 /* BabylonHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabylonHealthUITests.swift; sourceTree = "<group>"; };
 		879C2E4C1EBCEEDC00986674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		879C2E5A1EBCF07B00986674 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = application/AppDelegate.swift; sourceTree = "<group>"; };
+		879C2E621EBCF1E000986674 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableViewController.swift; path = viewcontrollers/HomeTableViewController.swift; sourceTree = "<group>"; };
+		B5F6B1E7A380E38A4D53EBC9 /* Pods-BabylonHealthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonHealthTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonHealthTests/Pods-BabylonHealthTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DC8A13618EF5C08A735D9B55 /* Pods-BabylonHealthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonHealthUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonHealthUITests/Pods-BabylonHealthUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CF51A02AF62EE77662106CD /* Pods_BabylonHealth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C53F2D91E7AC1916D3AA1156 /* Pods_BabylonHealthTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE4197C9424ABE23278F95EA /* Pods_BabylonHealthUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F5F5C58E59ED45327C6F73E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0812829645EF7496387C8018 /* Pods_BabylonHealth.framework */,
+				108C0097667ADE6D96B573F5 /* Pods_BabylonHealthTests.framework */,
+				667A35F7A85B8431810BA4B7 /* Pods_BabylonHealthUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		879C2E1E1EBCEEDC00986674 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +106,8 @@
 				879C2E3E1EBCEEDC00986674 /* BabylonHealthTests */,
 				879C2E491EBCEEDC00986674 /* BabylonHealthUITests */,
 				879C2E281EBCEEDC00986674 /* Products */,
+				892DC1CAC97D0D68FE03F7AE /* Pods */,
+				2F5F5C58E59ED45327C6F73E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +124,15 @@
 		879C2E291EBCEEDC00986674 /* BabylonHealth */ = {
 			isa = PBXGroup;
 			children = (
-				879C2E2A1EBCEEDC00986674 /* AppDelegate.swift */,
-				879C2E2C1EBCEEDC00986674 /* ViewController.swift */,
-				879C2E2E1EBCEEDC00986674 /* Main.storyboard */,
-				879C2E311EBCEEDC00986674 /* Assets.xcassets */,
-				879C2E331EBCEEDC00986674 /* LaunchScreen.storyboard */,
-				879C2E361EBCEEDC00986674 /* Info.plist */,
+				879C2E591EBCF03A00986674 /* application */,
+				879C2E641EBCF23100986674 /* controllers */,
+				879C2E651EBCF26300986674 /* extensions */,
+				879C2E5F1EBCF14900986674 /* interface */,
+				879C2E661EBCF29900986674 /* models */,
+				879C2E671EBCF2BD00986674 /* protocols */,
+				879C2E601EBCF15800986674 /* resources */,
+				879C2E5C1EBCF0DE00986674 /* viewcontrollers */,
+				879C2E611EBCF16D00986674 /* Supporting Files */,
 			);
 			path = BabylonHealth;
 			sourceTree = "<group>";
@@ -125,6 +155,88 @@
 			path = BabylonHealthUITests;
 			sourceTree = "<group>";
 		};
+		879C2E591EBCF03A00986674 /* application */ = {
+			isa = PBXGroup;
+			children = (
+				879C2E5A1EBCF07B00986674 /* AppDelegate.swift */,
+			);
+			name = application;
+			sourceTree = "<group>";
+		};
+		879C2E5C1EBCF0DE00986674 /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				879C2E621EBCF1E000986674 /* HomeTableViewController.swift */,
+			);
+			name = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		879C2E5F1EBCF14900986674 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				879C2E2E1EBCEEDC00986674 /* Main.storyboard */,
+				879C2E331EBCEEDC00986674 /* LaunchScreen.storyboard */,
+			);
+			name = interface;
+			sourceTree = "<group>";
+		};
+		879C2E601EBCF15800986674 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				879C2E311EBCEEDC00986674 /* Assets.xcassets */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		879C2E611EBCF16D00986674 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				879C2E361EBCEEDC00986674 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		879C2E641EBCF23100986674 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		879C2E651EBCF26300986674 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = extensions;
+			sourceTree = "<group>";
+		};
+		879C2E661EBCF29900986674 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		879C2E671EBCF2BD00986674 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = protocols;
+			sourceTree = "<group>";
+		};
+		892DC1CAC97D0D68FE03F7AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BD27EEACA4F42FE2FD1BF05 /* Pods-BabylonHealth.debug.xcconfig */,
+				8242FF12225FA4CC97F18F58 /* Pods-BabylonHealth.release.xcconfig */,
+				B5F6B1E7A380E38A4D53EBC9 /* Pods-BabylonHealthTests.debug.xcconfig */,
+				08B6A075B6E353AE21D59545 /* Pods-BabylonHealthTests.release.xcconfig */,
+				85BB6E49AC674724BB310D05 /* Pods-BabylonHealthUITests.debug.xcconfig */,
+				DC8A13618EF5C08A735D9B55 /* Pods-BabylonHealthUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +244,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 879C2E4F1EBCEEDC00986674 /* Build configuration list for PBXNativeTarget "BabylonHealth" */;
 			buildPhases = (
+				9AD6DD13742E98808BF3EBAB /* [CP] Check Pods Manifest.lock */,
 				879C2E231EBCEEDC00986674 /* Sources */,
 				879C2E241EBCEEDC00986674 /* Frameworks */,
 				879C2E251EBCEEDC00986674 /* Resources */,
+				879C2E581EBCEEEB00986674 /* Swiftlint */,
+				6D81C50D799532944B30D8C6 /* [CP] Embed Pods Frameworks */,
+				1A2A7FE4F022B7E5DCB9324C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +265,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 879C2E521EBCEEDC00986674 /* Build configuration list for PBXNativeTarget "BabylonHealthTests" */;
 			buildPhases = (
+				6417BD38E974402A9949B784 /* [CP] Check Pods Manifest.lock */,
 				879C2E371EBCEEDC00986674 /* Sources */,
 				879C2E381EBCEEDC00986674 /* Frameworks */,
 				879C2E391EBCEEDC00986674 /* Resources */,
+				964467B6EAA1B2F80E18D71B /* [CP] Embed Pods Frameworks */,
+				75C28A6AAF2AD913A15F9972 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +286,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 879C2E551EBCEEDC00986674 /* Build configuration list for PBXNativeTarget "BabylonHealthUITests" */;
 			buildPhases = (
+				AAD0AF665FD1EFA54E38EB6E /* [CP] Check Pods Manifest.lock */,
 				879C2E421EBCEEDC00986674 /* Sources */,
 				879C2E431EBCEEDC00986674 /* Frameworks */,
 				879C2E441EBCEEDC00986674 /* Resources */,
+				9D4F522D4AD23ABBF3C84871 /* [CP] Embed Pods Frameworks */,
+				1870EA53127E4DD671D84283 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,13 +379,165 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1870EA53127E4DD671D84283 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabylonHealthUITests/Pods-BabylonHealthUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1A2A7FE4F022B7E5DCB9324C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabylonHealth/Pods-BabylonHealth-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6417BD38E974402A9949B784 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6D81C50D799532944B30D8C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabylonHealth/Pods-BabylonHealth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75C28A6AAF2AD913A15F9972 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabylonHealthTests/Pods-BabylonHealthTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		879C2E581EBCEEEB00986674 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		964467B6EAA1B2F80E18D71B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabylonHealthTests/Pods-BabylonHealthTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AD6DD13742E98808BF3EBAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9D4F522D4AD23ABBF3C84871 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabylonHealthUITests/Pods-BabylonHealthUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAD0AF665FD1EFA54E38EB6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		879C2E231EBCEEDC00986674 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				879C2E2D1EBCEEDC00986674 /* ViewController.swift in Sources */,
-				879C2E2B1EBCEEDC00986674 /* AppDelegate.swift in Sources */,
+				879C2E631EBCF1E000986674 /* HomeTableViewController.swift in Sources */,
+				879C2E5B1EBCF07B00986674 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +687,7 @@
 		};
 		879C2E501EBCEEDC00986674 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BD27EEACA4F42FE2FD1BF05 /* Pods-BabylonHealth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LZASXEKJ7F;
@@ -426,6 +701,7 @@
 		};
 		879C2E511EBCEEDC00986674 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8242FF12225FA4CC97F18F58 /* Pods-BabylonHealth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LZASXEKJ7F;
@@ -439,6 +715,7 @@
 		};
 		879C2E531EBCEEDC00986674 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5F6B1E7A380E38A4D53EBC9 /* Pods-BabylonHealthTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +731,7 @@
 		};
 		879C2E541EBCEEDC00986674 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08B6A075B6E353AE21D59545 /* Pods-BabylonHealthTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +747,7 @@
 		};
 		879C2E561EBCEEDC00986674 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85BB6E49AC674724BB310D05 /* Pods-BabylonHealthUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = LZASXEKJ7F;
@@ -483,6 +762,7 @@
 		};
 		879C2E571EBCEEDC00986674 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC8A13618EF5C08A735D9B55 /* Pods-BabylonHealthUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = LZASXEKJ7F;
