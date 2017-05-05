@@ -15,6 +15,9 @@
 		879C2E4B1EBCEEDC00986674 /* BabylonHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E4A1EBCEEDC00986674 /* BabylonHealthUITests.swift */; };
 		879C2E5B1EBCF07B00986674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E5A1EBCF07B00986674 /* AppDelegate.swift */; };
 		879C2E631EBCF1E000986674 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E621EBCF1E000986674 /* HomeTableViewController.swift */; };
+		879C2E691EBCF4AE00986674 /* PostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E681EBCF4AE00986674 /* PostsController.swift */; };
+		879C2E6B1EBCF6E500986674 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E6A1EBCF6E500986674 /* Post.swift */; };
+		879C2E6F1EBD1DFA00986674 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E6E1EBD1DFA00986674 /* PostCell.swift */; };
 		BE4197C9424ABE23278F95EA /* Pods_BabylonHealthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A35F7A85B8431810BA4B7 /* Pods_BabylonHealthUITests.framework */; };
 		C53F2D91E7AC1916D3AA1156 /* Pods_BabylonHealthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 108C0097667ADE6D96B573F5 /* Pods_BabylonHealthTests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +60,9 @@
 		879C2E4C1EBCEEDC00986674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		879C2E5A1EBCF07B00986674 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = application/AppDelegate.swift; sourceTree = "<group>"; };
 		879C2E621EBCF1E000986674 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableViewController.swift; path = viewcontrollers/HomeTableViewController.swift; sourceTree = "<group>"; };
+		879C2E681EBCF4AE00986674 /* PostsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsController.swift; path = controllers/PostsController.swift; sourceTree = "<group>"; };
+		879C2E6A1EBCF6E500986674 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = models/Post.swift; sourceTree = "<group>"; };
+		879C2E6E1EBD1DFA00986674 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostCell.swift; path = views/PostCell.swift; sourceTree = "<group>"; };
 		B5F6B1E7A380E38A4D53EBC9 /* Pods-BabylonHealthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonHealthTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonHealthTests/Pods-BabylonHealthTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC8A13618EF5C08A735D9B55 /* Pods-BabylonHealthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonHealthUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonHealthUITests/Pods-BabylonHealthUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +138,8 @@
 				879C2E671EBCF2BD00986674 /* protocols */,
 				879C2E601EBCF15800986674 /* resources */,
 				879C2E5C1EBCF0DE00986674 /* viewcontrollers */,
+				879C2E6D1EBD1C5300986674 /* views */,
+				879C2E6C1EBD1C3700986674 /* viewmodels */,
 				879C2E611EBCF16D00986674 /* Supporting Files */,
 			);
 			path = BabylonHealth;
@@ -199,6 +207,7 @@
 		879C2E641EBCF23100986674 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				879C2E681EBCF4AE00986674 /* PostsController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -213,6 +222,7 @@
 		879C2E661EBCF29900986674 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				879C2E6A1EBCF6E500986674 /* Post.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -222,6 +232,21 @@
 			children = (
 			);
 			name = protocols;
+			sourceTree = "<group>";
+		};
+		879C2E6C1EBD1C3700986674 /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = viewmodels;
+			sourceTree = "<group>";
+		};
+		879C2E6D1EBD1C5300986674 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				879C2E6E1EBD1DFA00986674 /* PostCell.swift */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 		892DC1CAC97D0D68FE03F7AE /* Pods */ = {
@@ -537,7 +562,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				879C2E631EBCF1E000986674 /* HomeTableViewController.swift in Sources */,
+				879C2E691EBCF4AE00986674 /* PostsController.swift in Sources */,
 				879C2E5B1EBCF07B00986674 /* AppDelegate.swift in Sources */,
+				879C2E6B1EBCF6E500986674 /* Post.swift in Sources */,
+				879C2E6F1EBD1DFA00986674 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,6 +822,7 @@
 				879C2E511EBCEEDC00986674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		879C2E521EBCEEDC00986674 /* Build configuration list for PBXNativeTarget "BabylonHealthTests" */ = {
 			isa = XCConfigurationList;
@@ -802,6 +831,7 @@
 				879C2E541EBCEEDC00986674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		879C2E551EBCEEDC00986674 /* Build configuration list for PBXNativeTarget "BabylonHealthUITests" */ = {
 			isa = XCConfigurationList;
@@ -810,6 +840,7 @@
 				879C2E571EBCEEDC00986674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
