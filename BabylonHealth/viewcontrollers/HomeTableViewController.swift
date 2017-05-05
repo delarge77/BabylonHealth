@@ -12,14 +12,15 @@ import Mapper
 class HomeTableViewController: UITableViewController {
 
     var posts = [Post]()
-    
+    var postDataSource = HomeDataSource()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         PostsController.shared.loadPostsWith("posts") {[weak self] (result) in
             switch result {
             case .success(let postsResult):
-                    self?.posts = postsResult ?? []
+                    self?.postDataSource.posts = postsResult ?? []
+                    self?.tableView.dataSource = self?.postDataSource
                     self?.tableView.reloadData()
                     self?.tableView.estimatedRowHeight = 120.0
                     self?.tableView.rowHeight = UITableViewAutomaticDimension
@@ -27,29 +28,6 @@ class HomeTableViewController: UITableViewController {
                     print("\(error)")
             }
         }
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "postcell", for: indexPath) as? PostCell else {
-            fatalError()
-        }
-        
-        let post = posts[indexPath.row]
-        
-        cell.setUp(post)
-        
-        return cell
     }
 
     // MARK: - Navigation

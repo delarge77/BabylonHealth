@@ -13,11 +13,18 @@ class PostCell: UITableViewCell, TextPresentable {
     @IBOutlet weak var postTitleLabel: UILabel!
     @IBOutlet weak var postBodyLabel: UILabel!
     
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     func setUp(_ post: Post) {
         postTitleLabel.text = post.title
         postTitleLabel.textColor = textColor
         postBodyLabel.text = post.body
         postBodyLabel.font = textFont
     }
-    
 }

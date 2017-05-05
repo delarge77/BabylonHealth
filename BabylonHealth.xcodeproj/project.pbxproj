@@ -19,6 +19,8 @@
 		879C2E6B1EBCF6E500986674 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E6A1EBCF6E500986674 /* Post.swift */; };
 		879C2E6F1EBD1DFA00986674 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E6E1EBD1DFA00986674 /* PostCell.swift */; };
 		879C2E711EBD2A4500986674 /* TextPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E701EBD2A4500986674 /* TextPresentable.swift */; };
+		879C2E731EBD321300986674 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E721EBD321300986674 /* HomeDataSource.swift */; };
+		879C2E761EBD330E00986674 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E751EBD330E00986674 /* Reusable.swift */; };
 		BE4197C9424ABE23278F95EA /* Pods_BabylonHealthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A35F7A85B8431810BA4B7 /* Pods_BabylonHealthUITests.framework */; };
 		C53F2D91E7AC1916D3AA1156 /* Pods_BabylonHealthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 108C0097667ADE6D96B573F5 /* Pods_BabylonHealthTests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,8 @@
 		879C2E6A1EBCF6E500986674 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = models/Post.swift; sourceTree = "<group>"; };
 		879C2E6E1EBD1DFA00986674 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostCell.swift; path = views/PostCell.swift; sourceTree = "<group>"; };
 		879C2E701EBD2A4500986674 /* TextPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextPresentable.swift; path = protocols/TextPresentable.swift; sourceTree = "<group>"; };
+		879C2E721EBD321300986674 /* HomeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeDataSource.swift; path = datasource/HomeDataSource.swift; sourceTree = "<group>"; };
+		879C2E751EBD330E00986674 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = protocols/Reusable.swift; sourceTree = "<group>"; };
 		B5F6B1E7A380E38A4D53EBC9 /* Pods-BabylonHealthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonHealthTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonHealthTests/Pods-BabylonHealthTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC8A13618EF5C08A735D9B55 /* Pods-BabylonHealthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonHealthUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonHealthUITests/Pods-BabylonHealthUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +138,7 @@
 			children = (
 				879C2E591EBCF03A00986674 /* application */,
 				879C2E641EBCF23100986674 /* controllers */,
+				879C2E741EBD321800986674 /* datasource */,
 				879C2E651EBCF26300986674 /* extensions */,
 				879C2E5F1EBCF14900986674 /* interface */,
 				879C2E661EBCF29900986674 /* models */,
@@ -233,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				879C2E701EBD2A4500986674 /* TextPresentable.swift */,
+				879C2E751EBD330E00986674 /* Reusable.swift */,
 			);
 			name = protocols;
 			sourceTree = "<group>";
@@ -250,6 +256,14 @@
 				879C2E6E1EBD1DFA00986674 /* PostCell.swift */,
 			);
 			name = views;
+			sourceTree = "<group>";
+		};
+		879C2E741EBD321800986674 /* datasource */ = {
+			isa = PBXGroup;
+			children = (
+				879C2E721EBD321300986674 /* HomeDataSource.swift */,
+			);
+			name = datasource;
 			sourceTree = "<group>";
 		};
 		892DC1CAC97D0D68FE03F7AE /* Pods */ = {
@@ -566,7 +580,9 @@
 			files = (
 				879C2E631EBCF1E000986674 /* HomeTableViewController.swift in Sources */,
 				879C2E691EBCF4AE00986674 /* PostsController.swift in Sources */,
+				879C2E731EBD321300986674 /* HomeDataSource.swift in Sources */,
 				879C2E711EBD2A4500986674 /* TextPresentable.swift in Sources */,
+				879C2E761EBD330E00986674 /* Reusable.swift in Sources */,
 				879C2E5B1EBCF07B00986674 /* AppDelegate.swift in Sources */,
 				879C2E6B1EBCF6E500986674 /* Post.swift in Sources */,
 				879C2E6F1EBD1DFA00986674 /* PostCell.swift in Sources */,
