@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		879C2E2B1EBCEEDC00986674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E2A1EBCEEDC00986674 /* AppDelegate.swift */; };
+		879C2E2D1EBCEEDC00986674 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E2C1EBCEEDC00986674 /* ViewController.swift */; };
+		879C2E301EBCEEDC00986674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879C2E2E1EBCEEDC00986674 /* Main.storyboard */; };
+		879C2E321EBCEEDC00986674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879C2E311EBCEEDC00986674 /* Assets.xcassets */; };
+		879C2E351EBCEEDC00986674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879C2E331EBCEEDC00986674 /* LaunchScreen.storyboard */; };
+		879C2E401EBCEEDC00986674 /* BabylonHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E3F1EBCEEDC00986674 /* BabylonHealthTests.swift */; };
+		879C2E4B1EBCEEDC00986674 /* BabylonHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E4A1EBCEEDC00986674 /* BabylonHealthUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		879C2E3C1EBCEEDC00986674 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 879C2E1F1EBCEEDC00986674 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 879C2E261EBCEEDC00986674;
+			remoteInfo = BabylonHealth;
+		};
+		879C2E471EBCEEDC00986674 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 879C2E1F1EBCEEDC00986674 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 879C2E261EBCEEDC00986674;
+			remoteInfo = BabylonHealth;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		879C2E271EBCEEDC00986674 /* BabylonHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabylonHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		879C2E2A1EBCEEDC00986674 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		879C2E2C1EBCEEDC00986674 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		879C2E2F1EBCEEDC00986674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		879C2E311EBCEEDC00986674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		879C2E341EBCEEDC00986674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		879C2E361EBCEEDC00986674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		879C2E3B1EBCEEDC00986674 /* BabylonHealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabylonHealthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		879C2E3F1EBCEEDC00986674 /* BabylonHealthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabylonHealthTests.swift; sourceTree = "<group>"; };
+		879C2E411EBCEEDC00986674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		879C2E461EBCEEDC00986674 /* BabylonHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabylonHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		879C2E4A1EBCEEDC00986674 /* BabylonHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabylonHealthUITests.swift; sourceTree = "<group>"; };
+		879C2E4C1EBCEEDC00986674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		879C2E241EBCEEDC00986674 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879C2E381EBCEEDC00986674 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879C2E431EBCEEDC00986674 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		879C2E1E1EBCEEDC00986674 = {
+			isa = PBXGroup;
+			children = (
+				879C2E291EBCEEDC00986674 /* BabylonHealth */,
+				879C2E3E1EBCEEDC00986674 /* BabylonHealthTests */,
+				879C2E491EBCEEDC00986674 /* BabylonHealthUITests */,
+				879C2E281EBCEEDC00986674 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		879C2E281EBCEEDC00986674 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				879C2E271EBCEEDC00986674 /* BabylonHealth.app */,
+				879C2E3B1EBCEEDC00986674 /* BabylonHealthTests.xctest */,
+				879C2E461EBCEEDC00986674 /* BabylonHealthUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		879C2E291EBCEEDC00986674 /* BabylonHealth */ = {
+			isa = PBXGroup;
+			children = (
+				879C2E2A1EBCEEDC00986674 /* AppDelegate.swift */,
+				879C2E2C1EBCEEDC00986674 /* ViewController.swift */,
+				879C2E2E1EBCEEDC00986674 /* Main.storyboard */,
+				879C2E311EBCEEDC00986674 /* Assets.xcassets */,
+				879C2E331EBCEEDC00986674 /* LaunchScreen.storyboard */,
+				879C2E361EBCEEDC00986674 /* Info.plist */,
+			);
+			path = BabylonHealth;
+			sourceTree = "<group>";
+		};
+		879C2E3E1EBCEEDC00986674 /* BabylonHealthTests */ = {
+			isa = PBXGroup;
+			children = (
+				879C2E3F1EBCEEDC00986674 /* BabylonHealthTests.swift */,
+				879C2E411EBCEEDC00986674 /* Info.plist */,
+			);
+			path = BabylonHealthTests;
+			sourceTree = "<group>";
+		};
+		879C2E491EBCEEDC00986674 /* BabylonHealthUITests */ = {
+			isa = PBXGroup;
+			children = (
+				879C2E4A1EBCEEDC00986674 /* BabylonHealthUITests.swift */,
+				879C2E4C1EBCEEDC00986674 /* Info.plist */,
+			);
+			path = BabylonHealthUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		879C2E261EBCEEDC00986674 /* BabylonHealth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 879C2E4F1EBCEEDC00986674 /* Build configuration list for PBXNativeTarget "BabylonHealth" */;
+			buildPhases = (
+				879C2E231EBCEEDC00986674 /* Sources */,
+				879C2E241EBCEEDC00986674 /* Frameworks */,
+				879C2E251EBCEEDC00986674 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BabylonHealth;
+			productName = BabylonHealth;
+			productReference = 879C2E271EBCEEDC00986674 /* BabylonHealth.app */;
+			productType = "com.apple.product-type.application";
+		};
+		879C2E3A1EBCEEDC00986674 /* BabylonHealthTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 879C2E521EBCEEDC00986674 /* Build configuration list for PBXNativeTarget "BabylonHealthTests" */;
+			buildPhases = (
+				879C2E371EBCEEDC00986674 /* Sources */,
+				879C2E381EBCEEDC00986674 /* Frameworks */,
+				879C2E391EBCEEDC00986674 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				879C2E3D1EBCEEDC00986674 /* PBXTargetDependency */,
+			);
+			name = BabylonHealthTests;
+			productName = BabylonHealthTests;
+			productReference = 879C2E3B1EBCEEDC00986674 /* BabylonHealthTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		879C2E451EBCEEDC00986674 /* BabylonHealthUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 879C2E551EBCEEDC00986674 /* Build configuration list for PBXNativeTarget "BabylonHealthUITests" */;
+			buildPhases = (
+				879C2E421EBCEEDC00986674 /* Sources */,
+				879C2E431EBCEEDC00986674 /* Frameworks */,
+				879C2E441EBCEEDC00986674 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				879C2E481EBCEEDC00986674 /* PBXTargetDependency */,
+			);
+			name = BabylonHealthUITests;
+			productName = BabylonHealthUITests;
+			productReference = 879C2E461EBCEEDC00986674 /* BabylonHealthUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		879C2E1F1EBCEEDC00986674 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Alessandro dos Santos Pinto";
+				TargetAttributes = {
+					879C2E261EBCEEDC00986674 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = LZASXEKJ7F;
+						ProvisioningStyle = Automatic;
+					};
+					879C2E3A1EBCEEDC00986674 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = LZASXEKJ7F;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 879C2E261EBCEEDC00986674;
+					};
+					879C2E451EBCEEDC00986674 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = LZASXEKJ7F;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 879C2E261EBCEEDC00986674;
+					};
+				};
+			};
+			buildConfigurationList = 879C2E221EBCEEDC00986674 /* Build configuration list for PBXProject "BabylonHealth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 879C2E1E1EBCEEDC00986674;
+			productRefGroup = 879C2E281EBCEEDC00986674 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				879C2E261EBCEEDC00986674 /* BabylonHealth */,
+				879C2E3A1EBCEEDC00986674 /* BabylonHealthTests */,
+				879C2E451EBCEEDC00986674 /* BabylonHealthUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		879C2E251EBCEEDC00986674 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				879C2E351EBCEEDC00986674 /* LaunchScreen.storyboard in Resources */,
+				879C2E321EBCEEDC00986674 /* Assets.xcassets in Resources */,
+				879C2E301EBCEEDC00986674 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879C2E391EBCEEDC00986674 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879C2E441EBCEEDC00986674 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		879C2E231EBCEEDC00986674 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				879C2E2D1EBCEEDC00986674 /* ViewController.swift in Sources */,
+				879C2E2B1EBCEEDC00986674 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879C2E371EBCEEDC00986674 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				879C2E401EBCEEDC00986674 /* BabylonHealthTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879C2E421EBCEEDC00986674 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				879C2E4B1EBCEEDC00986674 /* BabylonHealthUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		879C2E3D1EBCEEDC00986674 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 879C2E261EBCEEDC00986674 /* BabylonHealth */;
+			targetProxy = 879C2E3C1EBCEEDC00986674 /* PBXContainerItemProxy */;
+		};
+		879C2E481EBCEEDC00986674 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 879C2E261EBCEEDC00986674 /* BabylonHealth */;
+			targetProxy = 879C2E471EBCEEDC00986674 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		879C2E2E1EBCEEDC00986674 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				879C2E2F1EBCEEDC00986674 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		879C2E331EBCEEDC00986674 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				879C2E341EBCEEDC00986674 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		879C2E4D1EBCEEDC00986674 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		879C2E4E1EBCEEDC00986674 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		879C2E501EBCEEDC00986674 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LZASXEKJ7F;
+				INFOPLIST_FILE = BabylonHealth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.delarge.BabylonHealth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		879C2E511EBCEEDC00986674 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LZASXEKJ7F;
+				INFOPLIST_FILE = BabylonHealth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.delarge.BabylonHealth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		879C2E531EBCEEDC00986674 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = LZASXEKJ7F;
+				INFOPLIST_FILE = BabylonHealthTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.delarge.BabylonHealthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BabylonHealth.app/BabylonHealth";
+			};
+			name = Debug;
+		};
+		879C2E541EBCEEDC00986674 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = LZASXEKJ7F;
+				INFOPLIST_FILE = BabylonHealthTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.delarge.BabylonHealthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BabylonHealth.app/BabylonHealth";
+			};
+			name = Release;
+		};
+		879C2E561EBCEEDC00986674 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = LZASXEKJ7F;
+				INFOPLIST_FILE = BabylonHealthUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.delarge.BabylonHealthUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BabylonHealth;
+			};
+			name = Debug;
+		};
+		879C2E571EBCEEDC00986674 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = LZASXEKJ7F;
+				INFOPLIST_FILE = BabylonHealthUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.delarge.BabylonHealthUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BabylonHealth;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		879C2E221EBCEEDC00986674 /* Build configuration list for PBXProject "BabylonHealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				879C2E4D1EBCEEDC00986674 /* Debug */,
+				879C2E4E1EBCEEDC00986674 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		879C2E4F1EBCEEDC00986674 /* Build configuration list for PBXNativeTarget "BabylonHealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				879C2E501EBCEEDC00986674 /* Debug */,
+				879C2E511EBCEEDC00986674 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		879C2E521EBCEEDC00986674 /* Build configuration list for PBXNativeTarget "BabylonHealthTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				879C2E531EBCEEDC00986674 /* Debug */,
+				879C2E541EBCEEDC00986674 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		879C2E551EBCEEDC00986674 /* Build configuration list for PBXNativeTarget "BabylonHealthUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				879C2E561EBCEEDC00986674 /* Debug */,
+				879C2E571EBCEEDC00986674 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 879C2E1F1EBCEEDC00986674 /* Project object */;
+}
