@@ -7,14 +7,15 @@
 //
 
 import UIKit
-import Mapper
 
-class HomeTableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController, UISplitViewControllerDelegate {
 
-    var posts = [Post]()
     var homeDataSource = HomeDataSource()
     override func viewDidLoad() {
         super.viewDidLoad()
+        splitViewController?.delegate = self
+        splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.allVisible
+        extendedLayoutIncludesOpaqueBars = true
 
         PostsController.shared.loadPostsWith("posts") {[weak self] (result) in
             switch result {
@@ -29,17 +30,20 @@ class HomeTableViewController: UITableViewController {
             }
         }
     }
+    
+    // MARK: - Split View Delegate
+    
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        return tableView.indexPathForSelectedRow == nil
+    }
 
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let destination = segue.destination as? WeatherDetailTableViewController,
-//            let cell = sender as? UITableViewCell,
-//            let indexPath = self.tableView.indexPath(for: cell) {
-//            destination.city = cities[indexPath.row]
-//        } else if segue.identifier == "addcity" {
-//            let destination = (segue.destination.contents as? AddCityTableViewController)
-//            destination?.delegate = self
-//        }
+        if let destination = segue.destination as? DetailScreenViewController,
+            let cell = sender as? UITableViewCell,
+            let indexPath = self.tableView.indexPath(for: cell) {
+            destination.post = homeDataSource.posts[indexPath.row]
+        }
     }
 }
