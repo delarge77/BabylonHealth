@@ -11,22 +11,21 @@ import Alamofire
 
 struct PostsController {
     static let shared = PostsController()
-    // MARK: TODO http ou https
     static let baseUrl = URL(string: "http://jsonplaceholder.typicode.com/")!
-    typealias postsCompletion = (Result<[Post]?>) -> Void
+    typealias postsCompletion = (APIResult<[Post]?>) -> Void
 }
 
 extension PostsController {
     
-    func loadPostsWith(_ option: String, completion:@escaping postsCompletion) {
+    func load(_ posts: String, completion:@escaping postsCompletion) {
         
-        let postsURL = PostsController.baseUrl.appendingPathComponent(option)
+        let postsURL = PostsController.baseUrl.appendingPathComponent(posts)
         
         Alamofire.request(postsURL, method: .get, parameters: nil, encoding: URLEncoding.default)
             .responseJSON { response in
                 
                 guard let httpResponse = response.response else {
-                    completion(.error(.requestFailed))
+                    completion( .error(. requestFailed))
                     return
                 }
                 
@@ -34,24 +33,24 @@ extension PostsController {
                     if let data = response.data {
                         guard let object = try? JSONSerialization.jsonObject(with:data),
                             let json = object as? NSArray else {
-                                completion(.error(.jsonConversionFailure))
+                                completion( .error( .jsonConversionFailure))
                                 return
                         }
                         let posts = Post.from(json)
                         completion( .success(posts))
 
                     } else {
-                        completion(.error(.invalidData))
+                        completion( .error( .invalidData))
                     }
                 } else {
-                    completion(.error(.responseUnsuccessful))
+                    completion( .error( .responseUnsuccessful))
                     print("\(httpResponse.statusCode)")
                 }
         }
     }
 }
 
-enum Result <T> {
+enum APIResult <T> {
     case success(T)
     case error(BabylonHealthApiError)
 }

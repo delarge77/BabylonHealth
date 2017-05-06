@@ -17,7 +17,7 @@ class HomeTableViewController: UITableViewController {
         splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.allVisible
         extendedLayoutIncludesOpaqueBars = true
 
-        PostsController.shared.loadPostsWith("posts") {[weak self] (result) in
+        PostsController.shared.load("posts") {[weak self] (result) in
             switch result {
             case .success(let postsResult):
                     self?.homeDataSource.posts = postsResult ?? []
