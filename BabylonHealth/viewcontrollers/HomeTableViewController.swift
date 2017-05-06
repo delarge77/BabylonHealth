@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeTableViewController: UITableViewController, UISplitViewControllerDelegate {
+class HomeTableViewController: UITableViewController {
 
     var homeDataSource = HomeDataSource()
     override func viewDidLoad() {
@@ -30,12 +30,6 @@ class HomeTableViewController: UITableViewController, UISplitViewControllerDeleg
             }
         }
     }
-    
-    // MARK: - Split View Delegate
-    
-    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
-        return tableView.indexPathForSelectedRow == nil
-    }
 
     // MARK: - Navigation
 
@@ -45,5 +39,11 @@ class HomeTableViewController: UITableViewController, UISplitViewControllerDeleg
             let indexPath = self.tableView.indexPath(for: cell) {
             destination.post = homeDataSource.posts[indexPath.row]
         }
+    }
+}
+
+extension HomeTableViewController: UISplitViewControllerDelegate {
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        return tableView.indexPathForSelectedRow == nil
     }
 }
