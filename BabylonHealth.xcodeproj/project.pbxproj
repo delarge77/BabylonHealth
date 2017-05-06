@@ -21,7 +21,6 @@
 		879C2E711EBD2A4500986674 /* TextPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E701EBD2A4500986674 /* TextPresentable.swift */; };
 		879C2E731EBD321300986674 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E721EBD321300986674 /* HomeDataSource.swift */; };
 		879C2E761EBD330E00986674 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E751EBD330E00986674 /* Reusable.swift */; };
-		879C2E781EBD427800986674 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E771EBD427800986674 /* UIViewController+Navigation.swift */; };
 		879C2E7A1EBD4A0C00986674 /* DetailScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E791EBD4A0C00986674 /* DetailScreenViewController.swift */; };
 		BE4197C9424ABE23278F95EA /* Pods_BabylonHealthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A35F7A85B8431810BA4B7 /* Pods_BabylonHealthUITests.framework */; };
 		C53F2D91E7AC1916D3AA1156 /* Pods_BabylonHealthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 108C0097667ADE6D96B573F5 /* Pods_BabylonHealthTests.framework */; };
@@ -71,7 +70,6 @@
 		879C2E701EBD2A4500986674 /* TextPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextPresentable.swift; path = protocols/TextPresentable.swift; sourceTree = "<group>"; };
 		879C2E721EBD321300986674 /* HomeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeDataSource.swift; path = datasource/HomeDataSource.swift; sourceTree = "<group>"; };
 		879C2E751EBD330E00986674 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = protocols/Reusable.swift; sourceTree = "<group>"; };
-		879C2E771EBD427800986674 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Navigation.swift"; path = "extensions/UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		879C2E791EBD4A0C00986674 /* DetailScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailScreenViewController.swift; path = viewcontrollers/DetailScreenViewController.swift; sourceTree = "<group>"; };
 		B5F6B1E7A380E38A4D53EBC9 /* Pods-BabylonHealthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonHealthTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonHealthTests/Pods-BabylonHealthTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC8A13618EF5C08A735D9B55 /* Pods-BabylonHealthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonHealthUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonHealthUITests/Pods-BabylonHealthUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -227,7 +225,6 @@
 		879C2E651EBCF26300986674 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
-				879C2E771EBD427800986674 /* UIViewController+Navigation.swift */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -588,7 +585,6 @@
 				879C2E631EBCF1E000986674 /* HomeTableViewController.swift in Sources */,
 				879C2E691EBCF4AE00986674 /* PostsController.swift in Sources */,
 				879C2E731EBD321300986674 /* HomeDataSource.swift in Sources */,
-				879C2E781EBD427800986674 /* UIViewController+Navigation.swift in Sources */,
 				879C2E711EBD2A4500986674 /* TextPresentable.swift in Sources */,
 				879C2E761EBD330E00986674 /* Reusable.swift in Sources */,
 				879C2E5B1EBCF07B00986674 /* AppDelegate.swift in Sources */,
