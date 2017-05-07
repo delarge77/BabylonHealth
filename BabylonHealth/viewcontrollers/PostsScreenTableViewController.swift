@@ -8,25 +8,25 @@
 
 import UIKit
 
-class HomeTableViewController: UITableViewController {
+class PostsScreenTableViewController: UITableViewController {
 
-    var homeDataSource = HomeDataSource()
+    var postScreenDataSource = PostScreenDataSource()
     override func viewDidLoad() {
         super.viewDidLoad()
         splitViewController?.delegate = self
         splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.allVisible
         extendedLayoutIncludesOpaqueBars = true
-
-        PostsController.shared.load("posts") {[weak self] (result) in
+        
+        BabylonHealthServiceAPI.load(posts: ServiceRouter.loadPosts) { [weak self] (result) in
             switch result {
             case .success(let postsResult):
-                    self?.homeDataSource.posts = postsResult ?? []
-                    self?.tableView.dataSource = self?.homeDataSource
-                    self?.tableView.reloadData()
-                    self?.tableView.estimatedRowHeight = 120.0
-                    self?.tableView.rowHeight = UITableViewAutomaticDimension
+                self?.postScreenDataSource.posts = postsResult ?? []
+                self?.tableView.dataSource = self?.postScreenDataSource
+                self?.tableView.reloadData()
+                self?.tableView.estimatedRowHeight = 120.0
+                self?.tableView.rowHeight = UITableViewAutomaticDimension
             case .error(let error):
-                    print("\(error)")
+                print("\(error)")
             }
         }
     }
@@ -37,12 +37,12 @@ class HomeTableViewController: UITableViewController {
         if let destination = segue.destination as? DetailScreenViewController,
             let cell = sender as? UITableViewCell,
             let indexPath = self.tableView.indexPath(for: cell) {
-            destination.post = homeDataSource.posts[indexPath.row]
+            destination.post = postScreenDataSource.posts[indexPath.row]
         }
     }
 }
 
-extension HomeTableViewController: UISplitViewControllerDelegate {
+extension PostsScreenTableViewController: UISplitViewControllerDelegate {
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
         return tableView.indexPathForSelectedRow == nil
     }

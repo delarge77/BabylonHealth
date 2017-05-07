@@ -19,6 +19,12 @@ class DetailScreenViewController: UIViewController {
             return
         }
         
-        print("\(p)")
+        BabylonHealthServiceAPI.load(user: ServiceRouter.searchUser(userId: p.userId)) { (result) in
+            print(result)
+        }
+        
+        BabylonHealthServiceAPI.load(comments: ServiceRouter.comments(postId: p.postId)) { (result) in
+            print(result)
+        }
     }
 }

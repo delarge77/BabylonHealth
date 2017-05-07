@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeDataSource: NSObject, UITableViewDataSource {
+class PostScreenDataSource: NSObject, UITableViewDataSource {
     
     var posts = [Post]()
     
