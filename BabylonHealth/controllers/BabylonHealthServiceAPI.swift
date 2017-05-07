@@ -15,7 +15,7 @@ struct BabylonHealthServiceAPI {
 
 extension BabylonHealthServiceAPI {
     
-    static func load(posts: URLRequestConvertible, completion: @escaping postsCompletion) {
+    static func loadPosts(_ posts: URLRequestConvertible, completion: @escaping postsCompletion) {
         Alamofire.request(posts).responseJSON(completionHandler: { response in
             
             guard let httpResponse = response.response else {
@@ -43,17 +43,17 @@ extension BabylonHealthServiceAPI {
         })
     }
     
-    static func load(user: URLRequestConvertible, completion: @escaping postsCompletion) {
+    static func loadDetails(user: URLRequestConvertible, comments: URLRequestConvertible,
+                            completion: @escaping postsCompletion) {
+        
         Alamofire.request(user).responseJSON(completionHandler: { response in
             
             print("\(response)")
             
         })
-    }
-    
-    static func load(comments: URLRequestConvertible, completion: @escaping postsCompletion) {
-        Alamofire.request(comments).responseJSON(completionHandler: { response in
         
+        Alamofire.request(comments).responseJSON(completionHandler: { response in
+            
             print("\(response)")
             
         })

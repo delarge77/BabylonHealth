@@ -17,7 +17,7 @@ class PostsScreenTableViewController: UITableViewController {
         splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.allVisible
         extendedLayoutIncludesOpaqueBars = true
         
-        BabylonHealthServiceAPI.load(posts: ServiceRouter.loadPosts) { [weak self] (result) in
+        BabylonHealthServiceAPI.loadPosts(ServiceRouter.loadPosts) { [weak self] (result) in
             switch result {
             case .success(let postsResult):
                 self?.postScreenDataSource.posts = postsResult ?? []
