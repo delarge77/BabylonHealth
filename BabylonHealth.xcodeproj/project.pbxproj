@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		4CF51A02AF62EE77662106CD /* Pods_BabylonHealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0812829645EF7496387C8018 /* Pods_BabylonHealth.framework */; };
 		8715E44E1EBDF667005EE564 /* ServiceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8715E44D1EBDF667005EE564 /* ServiceRouter.swift */; };
+		8715E4521EC06D0E005EE564 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8715E4511EC06D0E005EE564 /* User.swift */; };
+		8715E4541EC070BD005EE564 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8715E4531EC070BD005EE564 /* Comment.swift */; };
+		8715E4561EC080CB005EE564 /* DetailScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8715E4551EC080CB005EE564 /* DetailScreenDataSource.swift */; };
+		8715E4581EC08132005EE564 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8715E4571EC08132005EE564 /* DetailCell.swift */; };
+		8715E45B1EC0B50A005EE564 /* PostPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8715E45A1EC0B50A005EE564 /* PostPersistence.swift */; };
+		8715E45D1EC0B89D005EE564 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8715E45C1EC0B89D005EE564 /* Persistable.swift */; };
+		8715E4691EC0E8C7005EE564 /* UserPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8715E4681EC0E8C7005EE564 /* UserPersistence.swift */; };
+		8715E46B1EC0E8EB005EE564 /* CommentPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8715E46A1EC0E8EB005EE564 /* CommentPersistence.swift */; };
 		879C2E301EBCEEDC00986674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879C2E2E1EBCEEDC00986674 /* Main.storyboard */; };
 		879C2E321EBCEEDC00986674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879C2E311EBCEEDC00986674 /* Assets.xcassets */; };
 		879C2E351EBCEEDC00986674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879C2E331EBCEEDC00986674 /* LaunchScreen.storyboard */; };
@@ -53,6 +61,14 @@
 		8242FF12225FA4CC97F18F58 /* Pods-BabylonHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonHealth.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonHealth/Pods-BabylonHealth.release.xcconfig"; sourceTree = "<group>"; };
 		85BB6E49AC674724BB310D05 /* Pods-BabylonHealthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonHealthUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonHealthUITests/Pods-BabylonHealthUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8715E44D1EBDF667005EE564 /* ServiceRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceRouter.swift; path = controllers/ServiceRouter.swift; sourceTree = "<group>"; };
+		8715E4511EC06D0E005EE564 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = models/User.swift; sourceTree = "<group>"; };
+		8715E4531EC070BD005EE564 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = models/Comment.swift; sourceTree = "<group>"; };
+		8715E4551EC080CB005EE564 /* DetailScreenDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailScreenDataSource.swift; path = datasource/DetailScreenDataSource.swift; sourceTree = "<group>"; };
+		8715E4571EC08132005EE564 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailCell.swift; path = views/DetailCell.swift; sourceTree = "<group>"; };
+		8715E45A1EC0B50A005EE564 /* PostPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostPersistence.swift; path = persistence/models/PostPersistence.swift; sourceTree = "<group>"; };
+		8715E45C1EC0B89D005EE564 /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Persistable.swift; path = protocols/Persistable.swift; sourceTree = "<group>"; };
+		8715E4681EC0E8C7005EE564 /* UserPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPersistence.swift; path = persistence/models/UserPersistence.swift; sourceTree = "<group>"; };
+		8715E46A1EC0E8EB005EE564 /* CommentPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentPersistence.swift; path = persistence/models/CommentPersistence.swift; sourceTree = "<group>"; };
 		879C2E271EBCEEDC00986674 /* BabylonHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabylonHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879C2E2F1EBCEEDC00986674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		879C2E311EBCEEDC00986674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +131,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8715E4591EC0B4BB005EE564 /* persistence */ = {
+			isa = PBXGroup;
+			children = (
+				8715E46C1EC0FAA5005EE564 /* models */,
+			);
+			name = persistence;
+			sourceTree = "<group>";
+		};
+		8715E46C1EC0FAA5005EE564 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				8715E46A1EC0E8EB005EE564 /* CommentPersistence.swift */,
+				8715E4681EC0E8C7005EE564 /* UserPersistence.swift */,
+				8715E45A1EC0B50A005EE564 /* PostPersistence.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
 		879C2E1E1EBCEEDC00986674 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +180,7 @@
 				879C2E651EBCF26300986674 /* extensions */,
 				879C2E5F1EBCF14900986674 /* interface */,
 				879C2E661EBCF29900986674 /* models */,
+				8715E4591EC0B4BB005EE564 /* persistence */,
 				879C2E671EBCF2BD00986674 /* protocols */,
 				879C2E601EBCF15800986674 /* resources */,
 				879C2E5C1EBCF0DE00986674 /* viewcontrollers */,
@@ -235,6 +270,8 @@
 		879C2E661EBCF29900986674 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				8715E4531EC070BD005EE564 /* Comment.swift */,
+				8715E4511EC06D0E005EE564 /* User.swift */,
 				879C2E6A1EBCF6E500986674 /* Post.swift */,
 			);
 			name = models;
@@ -243,8 +280,9 @@
 		879C2E671EBCF2BD00986674 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
-				879C2E701EBD2A4500986674 /* TextPresentable.swift */,
+				8715E45C1EC0B89D005EE564 /* Persistable.swift */,
 				879C2E751EBD330E00986674 /* Reusable.swift */,
+				879C2E701EBD2A4500986674 /* TextPresentable.swift */,
 			);
 			name = protocols;
 			sourceTree = "<group>";
@@ -260,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				879C2E6E1EBD1DFA00986674 /* PostCell.swift */,
+				8715E4571EC08132005EE564 /* DetailCell.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -268,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				879C2E721EBD321300986674 /* PostScreenDataSource.swift */,
+				8715E4551EC080CB005EE564 /* DetailScreenDataSource.swift */,
 			);
 			name = datasource;
 			sourceTree = "<group>";
@@ -594,6 +634,14 @@
 				879C2E5B1EBCF07B00986674 /* AppDelegate.swift in Sources */,
 				879C2E6B1EBCF6E500986674 /* Post.swift in Sources */,
 				879C2E6F1EBD1DFA00986674 /* PostCell.swift in Sources */,
+				8715E45D1EC0B89D005EE564 /* Persistable.swift in Sources */,
+				8715E46B1EC0E8EB005EE564 /* CommentPersistence.swift in Sources */,
+				8715E4521EC06D0E005EE564 /* User.swift in Sources */,
+				8715E4561EC080CB005EE564 /* DetailScreenDataSource.swift in Sources */,
+				8715E4581EC08132005EE564 /* DetailCell.swift in Sources */,
+				8715E4691EC0E8C7005EE564 /* UserPersistence.swift in Sources */,
+				8715E45B1EC0B50A005EE564 /* PostPersistence.swift in Sources */,
+				8715E4541EC070BD005EE564 /* Comment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
