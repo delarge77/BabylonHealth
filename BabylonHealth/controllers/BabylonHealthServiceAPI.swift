@@ -35,19 +35,6 @@ extension BabylonHealthServiceAPI {
                     }
                     
                     let posts = Mapper<Post>().mapArray(JSONObject: json)
-//                    //
-//                    let container = try? Container()
-//                    try? container?.write { transaction in
-//                        for post in posts! {
-//                            transaction.add(post, update: true)
-//                        }
-//                    }
-//                    
-//                    let realm = try? Realm()
-//                    let postsPersisted = realm?.objects(PostPersistence.self)
-//                    print(postsPersisted!)
-                    
-//                    //
                     completion( .success(posts))
                     
                 } else {
@@ -82,7 +69,7 @@ extension BabylonHealthServiceAPI {
                     }
                     let user = Mapper<User>().mapArray(JSONObject: json)
                     print(user!)
-//                    completion( .success(user))
+                    //completion( .success(user))
                     
                 } else {
                     completion( .error( .invalidData))
@@ -111,6 +98,7 @@ extension BabylonHealthServiceAPI {
                     }
                     let comments = Mapper<Comment>().mapArray(JSONObject: json)
                     print(comments!)
+//                    completion( .sucess(comments))
                 } else {
                     completion( .error( .invalidData))
                 }

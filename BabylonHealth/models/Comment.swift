@@ -24,7 +24,7 @@ class Comment: Object, Mappable {
     }
     
     override class func primaryKey() -> String? {
-        return "postId"
+        return "name"
     }
     
     func mapping(map: Map) {

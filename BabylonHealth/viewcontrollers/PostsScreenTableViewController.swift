@@ -7,16 +7,12 @@
 //
 
 import UIKit
-import RealmSwift
 
 class PostsScreenTableViewController: UITableViewController {
 
     var postScreenDataSource = PostScreenDataSource()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Remove
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
-        // Remove
         splitViewController?.delegate = self
         splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.allVisible
         extendedLayoutIncludesOpaqueBars = true
