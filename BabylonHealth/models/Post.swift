@@ -7,36 +7,30 @@
 //
 
 import Foundation
-import Mapper
+import ObjectMapper
+import RealmSwift
+import ObjectMapper_Realm
 
-struct Post: Mappable {
+class Post: Object, Mappable {
     
-    let userId: Int
-    let postId: Int
-    let title: String
-    let body: String
-    
-    init(map: Mapper) throws {
-        try userId = map.from("userId")
-        try postId = map.from("id")
-        try title = map.from("title")
-        try body = map.from("body")
-    }
-}
+    dynamic var userId = 0
+    dynamic var postId = 0
+    dynamic var title = ""
+    dynamic var body = ""
 
-extension Post: Persistable {
-    public init(managedObject: PostPersistence) {
-        userId = managedObject.userId
-        postId = managedObject.postId
-        title = managedObject.title
-        body = managedObject.body
+    required convenience init?(map: Map) {
+        self.init()
     }
-    public func managedObject() -> PostPersistence {
-        let post = PostPersistence()
-        post.userId = userId
-        post.postId = postId
-        post.title = title
-        post.body = body
-        return post
+    
+    override class func primaryKey() -> String? {
+        return "postId"
     }
+    
+    func mapping(map: Map) {
+        userId <- map["userId"]
+        postId <- map["id"]
+        title <- map["title"]
+        body <- map["body"]
+    }
+    
 }

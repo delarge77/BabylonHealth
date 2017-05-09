@@ -7,44 +7,33 @@
 //
 
 import Foundation
-import Mapper
+import ObjectMapper
+import RealmSwift
+import ObjectMapper_Realm
 
-struct User: Mappable {
+class User: Object, Mappable {
     
-    let email: String
-    let userId: Int
-    let name: String
-    let phone: String
-    let username: String
-    let website: String
+    dynamic var email = ""
+    dynamic var userId = 0
+    dynamic var name = ""
+    dynamic var phone = ""
+    dynamic var username = ""
+    dynamic var website = ""
     
-    init(map: Mapper) throws {
-        try email = map.from("email")
-        try userId = map.from("id")
-        try name = map.from("name")
-        try phone = map.from("phone")
-        try username = map.from("username")
-        try website = map.from("website")
+    required convenience init?(map: Map) {
+        self.init()
     }
-}
-
-extension User: Persistable {
-    public init(managedObject: UserPersistence) {
-        email = managedObject.email
-        userId = managedObject.userId
-        name = managedObject.name
-        phone = managedObject.phone
-        username = managedObject.username
-        website = managedObject.website
+    
+    override class func primaryKey() -> String? {
+        return "userId"
     }
-    public func managedObject() -> UserPersistence {
-        let user = UserPersistence()
-        user.email = email
-        user.userId = userId
-        user.name = name
-        user.phone = phone
-        user.username = username
-        user.website = website
-        return user
+    
+    func mapping(map: Map) {
+        email <- map["email"]
+        userId <- map["id"]
+        name <- map["name"]
+        phone <- map["phone"]
+        username <- map["username"]
+        website <- map["website"]
     }
 }

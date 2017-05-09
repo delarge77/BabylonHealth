@@ -7,40 +7,31 @@
 //
 
 import Foundation
-import Mapper
+import ObjectMapper
+import RealmSwift
+import ObjectMapper_Realm
 
-struct Comment: Mappable {
+class Comment: Object, Mappable {
     
-    let postId: Int
-    let userId: Int
-    let name: String
-    let email: String
-    let body: String
+    dynamic var postId = 0
+    dynamic var userId = 0
+    dynamic var name = ""
+    dynamic var email = ""
+    dynamic var body = ""
     
-    init(map: Mapper) throws {
-        try postId = map.from("postId")
-        try userId = map.from("id")
-        try name = map.from("name")
-        try email = map.from("email")
-        try body = map.from("body")
+    required convenience init?(map: Map) {
+        self.init()
     }
-}
-
-extension Comment: Persistable {
-    public init(managedObject: CommentPersistence) {
-        postId = managedObject.postId
-        userId = managedObject.userId
-        name = managedObject.name
-        email = managedObject.email
-        body = managedObject.body
+    
+    override class func primaryKey() -> String? {
+        return "postId"
     }
-    public func managedObject() -> CommentPersistence {
-        let comment = CommentPersistence()
-        comment.postId = postId
-        comment.userId = userId
-        comment.name = name
-        comment.email = email
-        comment.body = body
-        return comment
+    
+    func mapping(map: Map) {
+        postId <- map["postId"]
+        userId <- map["id"]
+        name <- map["name"]
+        email <- map["email"]
+        body <- map["body"]
     }
 }

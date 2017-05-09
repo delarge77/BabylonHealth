@@ -8,6 +8,8 @@
 
 import Foundation
 import Alamofire
+import ObjectMapper
+import RealmSwift
 
 struct BabylonHealthServiceAPI {
     typealias postsCompletion = (APIResult<[Post]?>) -> Void
@@ -31,7 +33,21 @@ extension BabylonHealthServiceAPI {
                             completion( .error( .jsonConversionFailure))
                             return
                     }
-                    let posts = Post.from(json)
+                    
+                    let posts = Mapper<Post>().mapArray(JSONObject: json)
+//                    //
+//                    let container = try? Container()
+//                    try? container?.write { transaction in
+//                        for post in posts! {
+//                            transaction.add(post, update: true)
+//                        }
+//                    }
+//                    
+//                    let realm = try? Realm()
+//                    let postsPersisted = realm?.objects(PostPersistence.self)
+//                    print(postsPersisted!)
+                    
+//                    //
                     completion( .success(posts))
                     
                 } else {
@@ -44,7 +60,9 @@ extension BabylonHealthServiceAPI {
         })
     }
     
-    static func loadDetails(user: URLRequestConvertible, comments: URLRequestConvertible, completion: @escaping detailsCompletion) {
+    static func loadDetails(user: URLRequestConvertible,
+                            comments: URLRequestConvertible,
+                            completion: @escaping detailsCompletion) {
         
         let group = DispatchGroup()
         group.enter()
@@ -62,8 +80,8 @@ extension BabylonHealthServiceAPI {
                             completion( .error( .jsonConversionFailure))
                             return
                     }
-                    let user = User.from(json)
-                    print("\(String(describing: user))")
+                    let user = Mapper<User>().mapArray(JSONObject: json)
+                    print(user!)
 //                    completion( .success(user))
                     
                 } else {
@@ -91,10 +109,8 @@ extension BabylonHealthServiceAPI {
                             completion( .error( .jsonConversionFailure))
                             return
                     }
-                    let comments = Comment.from(json)
-                    print("\(String(describing: comments))")
-                    //                    completion( .success(user))
-                    
+                    let comments = Mapper<Comment>().mapArray(JSONObject: json)
+                    print(comments!)
                 } else {
                     completion( .error( .invalidData))
                 }
