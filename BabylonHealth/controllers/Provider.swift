@@ -46,8 +46,12 @@ extension Provider {
                     }
                     completion(response)
                 case .error(let error):
-//                    let user = self.getUserById(userId: post.userId)
-//                    let comments = self.getCommentsByPostId(postId: post.postId)
+                    guard let user = self.getUserById(userId: post.userId) else {
+                        return
+                    }
+                    print(user)
+                    let comments = self.getCommentsByPostId(postId: post.postId)
+                    print(comments)
 //                    let compound = CompoundResponse(user: user, comments: comments)
                     print(error)
             }

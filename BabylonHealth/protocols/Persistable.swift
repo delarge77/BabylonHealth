@@ -13,11 +13,12 @@ protocol Persistable {
     
     associatedtype T
     associatedtype C
+    associatedtype U
     
     func getAll() -> [T]?
     func getCommentsByPostId(postId: Int) -> C?
     func insert<T: Object>(item: T, update: Bool)
-    func getUserById<T>(userId: Int) -> T? where T : Object
+    func getUserById(userId: Int) -> U?
 }
 
 extension Persistable {
@@ -32,8 +33,8 @@ extension Persistable {
         }
     }
     
-    func getUserById<T>(userId: Int) -> T? where T : Object {
-        return realm?.object(ofType: UserObject.self, forPrimaryKey: userId) as? T
+    func getUserById(userId: Int) -> User? {
+        return (realm?.object(ofType: UserObject.self, forPrimaryKey: userId).map {$0.user})!
     }
     
     func getAll() -> [Post]? {
