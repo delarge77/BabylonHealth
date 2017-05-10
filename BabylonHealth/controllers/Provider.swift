@@ -36,12 +36,21 @@ extension Provider {
             
             switch result {
                 case .success(let response):
-                    
-                completion(response)
+                    let user = response.user
+                    let userObject = UserObject(user: user)
+                    self.insert(item: userObject, update: true)
+                    let comments = response.comments
+                    for com in comments {
+                        let commentsObject = CommentObject(comment: com)
+                        self.insert(item: commentsObject, update: true)
+                    }
+                    completion(response)
                 case .error(let error):
-                print(error)
+//                    let user = self.getUserById(userId: post.userId)
+//                    let comments = self.getCommentsByPostId(postId: post.postId)
+//                    let compound = CompoundResponse(user: user, comments: comments)
+                    print(error)
             }
         }
-        
     }
 }

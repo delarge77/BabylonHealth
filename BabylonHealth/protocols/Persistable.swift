@@ -11,8 +11,11 @@ import RealmSwift
 
 protocol Persistable {
     
-    func getAll() -> [Post]?
-    func getCommentsByPostId(postId: Int) -> Results<CommentObject>?
+    associatedtype T
+    associatedtype C
+    
+    func getAll() -> [T]?
+    func getCommentsByPostId(postId: Int) -> C?
     func insert<T: Object>(item: T, update: Bool)
     func getUserById<T>(userId: Int) -> T? where T : Object
 }
