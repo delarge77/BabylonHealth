@@ -12,13 +12,15 @@ import ObjectMapper
 import RealmSwift
 
 struct BabylonHealthServiceAPI {
-    typealias postsCompletion = (APIResult<[Post]?>) -> Void
-    typealias detailsCompletion = (APIResult<CompoundResponse?>) -> Void
+    typealias PostsBlock = (APIResult<[Post]>) -> Void
+    typealias DetailsBlock = (APIResult<CompoundResponse>) -> Void
+    typealias UserDetailsBlock = (APIResult<User>) -> Void
+    typealias CommentsBlock = (APIResult<[Comment]>) -> Void
 }
 
 extension BabylonHealthServiceAPI {
     
-    static func loadPosts(_ posts: URLRequestConvertible, completion: @escaping postsCompletion) {
+    static func loadPosts(_ posts: URLRequestConvertible, completion: @escaping PostsBlock) {
         Alamofire.request(posts).responseJSON(completionHandler: { response in
             
             guard let httpResponse = response.response else {
@@ -33,33 +35,65 @@ extension BabylonHealthServiceAPI {
                             completion( .error( .jsonConversionFailure))
                             return
                     }
-                    
-                    let posts = Mapper<Post>().mapArray(JSONObject: json)
+                    guard let postsObject = Mapper<PostObject>().mapArray(JSONObject: json) else {
+                        return
+                    }
+                    let posts = postsObject.map {$0.post}
                     completion( .success(posts))
-                    
                 } else {
                     completion( .error( .invalidData))
                 }
             } else {
                 completion( .error( .responseUnsuccessful))
-                print("\(httpResponse.statusCode)")
             }
         })
     }
     
-    static func loadDetails(user: URLRequestConvertible,
-                            comments: URLRequestConvertible,
-                            completion: @escaping detailsCompletion) {
+    static func loadDetails(userConvertible: URLRequestConvertible,
+                            commentsConvertible: URLRequestConvertible,
+                            completion: @escaping DetailsBlock) {
         
+        var user: User? = nil
+        var comments: [Comment]? = nil
         let group = DispatchGroup()
+        
         group.enter()
+        load(user: userConvertible) { result in
+            switch result {
+            case .success(let userResponse):
+                user = userResponse
+            case .error(let error):
+                print("\(error)")
+            }
+            group.leave()
+        }
+        
+        group.enter()
+        load(comments: commentsConvertible) { result in
+            switch result {
+                case .success(let commentsResponse):
+                    comments = commentsResponse
+                case .error(let error):
+                    print("\(error)")
+            }
+            group.leave()
+        }
+        
+        group.notify(queue: .main) {
+            let result = CompoundResponse(user: user!, comments: comments!)
+            completion(.success(result))
+        }
+    }
+    
+    static func load(user: URLRequestConvertible, completion: @escaping UserDetailsBlock) {
+        
         Alamofire.request(user).responseJSON(completionHandler: { response in
             
             guard let httpResponse = response.response else {
                 completion( .error(. requestFailed))
                 return
             }
-            
+
             if httpResponse.statusCode == 200 {
                 if let data = response.data {
                     guard let object = try? JSONSerialization.jsonObject(with:data),
@@ -67,28 +101,30 @@ extension BabylonHealthServiceAPI {
                             completion( .error( .jsonConversionFailure))
                             return
                     }
-                    let user = Mapper<User>().mapArray(JSONObject: json)
-                    print(user!)
-                    //completion( .success(user))
                     
+                    guard let userObject = Mapper<UserObject>().map(JSONObject: json.firstObject) else {
+                        return
+                    }
+                    completion( .success(userObject.user))
+
                 } else {
                     completion( .error( .invalidData))
                 }
             } else {
                 completion( .error( .responseUnsuccessful))
-                print("\(httpResponse.statusCode)")
             }
-            group.leave()
         })
+    }
+    
+    static func load(comments: URLRequestConvertible, completion: @escaping CommentsBlock) {
         
-        group.enter()
         Alamofire.request(comments).responseJSON(completionHandler: { response in
             
             guard let httpResponse = response.response else {
                 completion( .error(. requestFailed))
                 return
             }
-            
+
             if httpResponse.statusCode == 200 {
                 if let data = response.data {
                     guard let object = try? JSONSerialization.jsonObject(with:data),
@@ -96,23 +132,18 @@ extension BabylonHealthServiceAPI {
                             completion( .error( .jsonConversionFailure))
                             return
                     }
-                    let comments = Mapper<Comment>().mapArray(JSONObject: json)
-                    print(comments!)
-//                    completion( .sucess(comments))
+                    guard let commentObjects = Mapper<CommentObject>().mapArray(JSONObject: json) else {
+                        return
+                    }
+                    let comments = commentObjects.map {$0.comment}
+                    completion( .success(comments))
                 } else {
                     completion( .error( .invalidData))
                 }
             } else {
                 completion( .error( .responseUnsuccessful))
-                print("\(httpResponse.statusCode)")
             }
-
-            group.leave()
         })
-        
-        group.notify(queue: .main) {
-            print("both requests done)")
-        }
     }
 }
 

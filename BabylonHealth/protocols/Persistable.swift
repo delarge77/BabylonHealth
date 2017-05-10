@@ -11,8 +11,8 @@ import RealmSwift
 
 protocol Persistable {
     
-    func getAll() -> Results<Post>?
-    func getCommentsByPostId(postId: Int) -> Results<Comment>?
+    func getAll() -> [Post]?
+    func getCommentsByPostId(postId: Int) -> Results<CommentObject>?
     func insert<T: Object>(item: T, update: Bool)
     func getUserById<T>(userId: Int) -> T? where T : Object
 }
@@ -30,14 +30,14 @@ extension Persistable {
     }
     
     func getUserById<T>(userId: Int) -> T? where T : Object {
-        return realm?.object(ofType: User.self, forPrimaryKey: userId) as? T
+        return realm?.object(ofType: UserObject.self, forPrimaryKey: userId) as? T
     }
     
-    func getAll() -> Results<Post>? {
-        return realm?.objects(Post.self)
+    func getAll() -> [Post]? {
+        return realm?.objects(PostObject.self).map {$0.post}
     }
     
-    func getCommentsByPostId(postId: Int) -> Results<Comment>? {
-        return realm?.objects(Comment.self).filter("postId == %@", postId)
+    func getCommentsByPostId(postId: Int) -> Results<CommentObject>? {
+        return realm?.objects(CommentObject.self).filter("postId == %@", postId)
     }
 }

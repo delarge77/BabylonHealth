@@ -23,21 +23,14 @@ class DetailScreenViewController: UIViewController {
             return
         }
         
-        BabylonHealthServiceAPI.loadDetails(user: ServiceRouter.searchUser(userId: post.userId),
-                                        comments: ServiceRouter.comments(postId: post.postId)) { (result ) in
-            
-         print(result)
-                                                
-//            switch result {
-//            case .success(let comments):
-//                self?.detailScreenDataSource.comments = comments ?? []
-//                self?.commentsTableView.dataSource = self?.detailScreenDataSource
-//                self?.commentsTableView.reloadData()
-//                self?.commentsTableView.estimatedRowHeight = 120.0
-//                self?.commentsTableView.rowHeight = UITableViewAutomaticDimension
-//            case .error(let error):
-//                print("\(error)")
-//            }
+        Provider.shared.loadDetailsFrom(post: post) { [weak self] compoundResult in
+            self?.detailScreenDataSource.comments = compoundResult.comments 
+            self?.commentsTableView.dataSource = self?.detailScreenDataSource
+            self?.commentsCountLabel.text = "\(compoundResult.comments.count)"
+            self?.postBodyLabel.text = post.body
+            self?.commentsTableView.reloadData()
+            self?.commentsTableView.estimatedRowHeight = 120.0
+            self?.commentsTableView.rowHeight = UITableViewAutomaticDimension
         }
     }
 }

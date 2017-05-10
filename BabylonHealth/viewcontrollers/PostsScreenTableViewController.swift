@@ -17,17 +17,12 @@ class PostsScreenTableViewController: UITableViewController {
         splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.allVisible
         extendedLayoutIncludesOpaqueBars = true
         
-        BabylonHealthServiceAPI.loadPosts(ServiceRouter.loadPosts) { [weak self] (result) in
-            switch result {
-            case .success(let postsResult):
-                self?.postScreenDataSource.posts = postsResult ?? []
-                self?.tableView.dataSource = self?.postScreenDataSource
-                self?.tableView.reloadData()
-                self?.tableView.estimatedRowHeight = 120.0
-                self?.tableView.rowHeight = UITableViewAutomaticDimension
-            case .error(let error):
-                print("\(error)")
-            }
+        Provider.shared.loadPosts { [weak self] (posts) in
+            self?.postScreenDataSource.posts = posts ?? []
+            self?.tableView.dataSource = self?.postScreenDataSource
+            self?.tableView.reloadData()
+            self?.tableView.estimatedRowHeight = 120.0
+            self?.tableView.rowHeight = UITableViewAutomaticDimension
         }
     }
 
