@@ -36,6 +36,7 @@ extension Provider {
             
             switch result {
                 case .success(let response):
+                    
                 completion(response)
                 case .error(let error):
                 print(error)

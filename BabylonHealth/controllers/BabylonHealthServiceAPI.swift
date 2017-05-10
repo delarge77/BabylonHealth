@@ -80,7 +80,17 @@ extension BabylonHealthServiceAPI {
         }
         
         group.notify(queue: .main) {
-            let result = CompoundResponse(user: user!, comments: comments!)
+            
+            guard let user = user else {
+                completion( .error( .responseUnsuccessful))
+                return
+            }
+            guard let comments = comments else {
+                completion( .error( .responseUnsuccessful))
+                return
+            }
+            
+            let result = CompoundResponse(user: user, comments: comments)
             completion(.success(result))
         }
     }
