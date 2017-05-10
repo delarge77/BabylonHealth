@@ -1,15 +1,14 @@
 //
-//  BabylonHealthTests.swift
-//  BabylonHealthTests
+//  PostObjectModel.swift
+//  BabylonHealth
 //
-//  Created by Alessandro dos Santos Pinto on 05/05/2017.
+//  Created by Alessandro dos Santos Pinto on 10/05/2017.
 //  Copyright © 2017 Alessandro dos Santos Pinto. All rights reserved.
 //
 
 import XCTest
-@testable import BabylonHealth
 
-class BabylonHealthTests: XCTestCase {
+class PostObjectModelTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

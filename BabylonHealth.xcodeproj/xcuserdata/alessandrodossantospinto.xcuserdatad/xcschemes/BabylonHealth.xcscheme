@@ -26,28 +26,9 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "879C2E3A1EBCEEDC00986674"
-               BuildableName = "BabylonHealthTests.xctest"
-               BlueprintName = "BabylonHealthTests"
-               ReferencedContainer = "container:BabylonHealth.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "879C2E451EBCEEDC00986674"
-               BuildableName = "BabylonHealthUITests.xctest"
-               BlueprintName = "BabylonHealthUITests"
-               ReferencedContainer = "container:BabylonHealth.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
