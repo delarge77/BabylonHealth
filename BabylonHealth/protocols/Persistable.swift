@@ -16,7 +16,7 @@ protocol Persistable {
     associatedtype U
     
     func getAll() -> [T]?
-    func getCommentsByPostId(postId: Int) -> C?
+    func getCommentsByPostId(postId: Int) -> [C]?
     func insert<T: Object>(item: T, update: Bool)
     func getUserById(userId: Int) -> U?
 }
@@ -41,7 +41,7 @@ extension Persistable {
         return realm?.objects(PostObject.self).map {$0.post}
     }
     
-    func getCommentsByPostId(postId: Int) -> Results<CommentObject>? {
-        return realm?.objects(CommentObject.self).filter("postId == %@", postId)
+    func getCommentsByPostId(postId: Int) -> [Comment]? {
+        return realm?.objects(CommentObject.self).filter("postId == %@", postId).map {$0.comment}
     }
 }

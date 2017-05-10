@@ -45,15 +45,15 @@ extension Provider {
                         self.insert(item: commentsObject, update: true)
                     }
                     completion(response)
-                case .error(let error):
+                case .error:
                     guard let user = self.getUserById(userId: post.userId) else {
                         return
                     }
-                    print(user)
-                    let comments = self.getCommentsByPostId(postId: post.postId)
-                    print(comments)
-//                    let compound = CompoundResponse(user: user, comments: comments)
-                    print(error)
+                    guard let comments = self.getCommentsByPostId(postId: post.postId) else {
+                        return
+                    }
+                    let compound = CompoundResponse(user: user, comments: comments)
+                    completion(compound)
             }
         }
     }
