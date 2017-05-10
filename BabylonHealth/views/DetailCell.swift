@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailCell: UITableViewCell, TextPresentable {
+class DetailCell: UITableViewCell, CellTextPresentable {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
@@ -23,8 +23,8 @@ class DetailCell: UITableViewCell, TextPresentable {
     
     func setUp(_ comment: Comment) {
         nameLabel.text = comment.name
-        nameLabel.textColor = textColor
+        nameLabel.textColor = commentsColor
         commentLabel.text = comment.body
-        commentLabel.font = textFont
+        commentLabel.font = commentsFont
     }
 }

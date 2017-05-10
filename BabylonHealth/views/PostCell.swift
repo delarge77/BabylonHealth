@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PostCell: UITableViewCell, TextPresentable {
+class PostCell: UITableViewCell, CellTextPresentable {
     
     @IBOutlet weak var postTitleLabel: UILabel!
     @IBOutlet weak var postBodyLabel: UILabel!
@@ -23,8 +23,8 @@ class PostCell: UITableViewCell, TextPresentable {
 
     func setUp(_ post: Post) {
         postTitleLabel.text = post.title
-        postTitleLabel.textColor = textColor
+        postTitleLabel.textColor = postsColor
         postBodyLabel.text = post.body
-        postBodyLabel.font = textFont
+        postBodyLabel.font = postsFont
     }
 }

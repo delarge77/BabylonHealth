@@ -24,7 +24,7 @@
 		879C2E691EBCF4AE00986674 /* BabylonHealthServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E681EBCF4AE00986674 /* BabylonHealthServiceAPI.swift */; };
 		879C2E6B1EBCF6E500986674 /* PostObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E6A1EBCF6E500986674 /* PostObject.swift */; };
 		879C2E6F1EBD1DFA00986674 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E6E1EBD1DFA00986674 /* PostCell.swift */; };
-		879C2E711EBD2A4500986674 /* TextPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E701EBD2A4500986674 /* TextPresentable.swift */; };
+		879C2E711EBD2A4500986674 /* CellTextPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E701EBD2A4500986674 /* CellTextPresentable.swift */; };
 		879C2E731EBD321300986674 /* PostScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E721EBD321300986674 /* PostScreenDataSource.swift */; };
 		879C2E761EBD330E00986674 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E751EBD330E00986674 /* Reusable.swift */; };
 		879C2E7A1EBD4A0C00986674 /* DetailScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E791EBD4A0C00986674 /* DetailScreenViewController.swift */; };
@@ -83,7 +83,7 @@
 		879C2E681EBCF4AE00986674 /* BabylonHealthServiceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BabylonHealthServiceAPI.swift; path = controllers/BabylonHealthServiceAPI.swift; sourceTree = "<group>"; };
 		879C2E6A1EBCF6E500986674 /* PostObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostObject.swift; path = models/persistentModel/PostObject.swift; sourceTree = "<group>"; };
 		879C2E6E1EBD1DFA00986674 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostCell.swift; path = views/PostCell.swift; sourceTree = "<group>"; };
-		879C2E701EBD2A4500986674 /* TextPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextPresentable.swift; path = protocols/TextPresentable.swift; sourceTree = "<group>"; };
+		879C2E701EBD2A4500986674 /* CellTextPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellTextPresentable.swift; path = protocols/CellTextPresentable.swift; sourceTree = "<group>"; };
 		879C2E721EBD321300986674 /* PostScreenDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostScreenDataSource.swift; path = datasource/PostScreenDataSource.swift; sourceTree = "<group>"; };
 		879C2E751EBD330E00986674 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = protocols/Reusable.swift; sourceTree = "<group>"; };
 		879C2E791EBD4A0C00986674 /* DetailScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailScreenViewController.swift; path = viewcontrollers/DetailScreenViewController.swift; sourceTree = "<group>"; };
@@ -267,7 +267,7 @@
 			children = (
 				8715E45C1EC0B89D005EE564 /* Persistable.swift */,
 				879C2E751EBD330E00986674 /* Reusable.swift */,
-				879C2E701EBD2A4500986674 /* TextPresentable.swift */,
+				879C2E701EBD2A4500986674 /* CellTextPresentable.swift */,
 			);
 			name = protocols;
 			sourceTree = "<group>";
@@ -626,7 +626,7 @@
 				87E809301EC2479C00DAD709 /* Provider.swift in Sources */,
 				87E809321EC27A4600DAD709 /* Comment.swift in Sources */,
 				8715E44E1EBDF667005EE564 /* ServiceRouter.swift in Sources */,
-				879C2E711EBD2A4500986674 /* TextPresentable.swift in Sources */,
+				879C2E711EBD2A4500986674 /* CellTextPresentable.swift in Sources */,
 				879C2E761EBD330E00986674 /* Reusable.swift in Sources */,
 				879C2E5B1EBCF07B00986674 /* AppDelegate.swift in Sources */,
 				879C2E6B1EBCF6E500986674 /* PostObject.swift in Sources */,
