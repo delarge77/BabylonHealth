@@ -8,15 +8,11 @@
 
 import UIKit
 
-import RealmSwift
-
 class PostsScreenTableViewController: UITableViewController {
 
     var postScreenDataSource = PostScreenDataSource()
     
     override func viewDidLoad() {
-        
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         super.viewDidLoad()
         splitViewController?.delegate = self

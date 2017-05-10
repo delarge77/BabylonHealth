@@ -12,6 +12,8 @@ class DetailScreenViewController: UIViewController {
 
     var post: Post?
     var detailScreenDataSource = DetailScreenDataSource()
+    
+    @IBOutlet weak var authorNameLabel: UILabel!
     @IBOutlet weak var postBodyLabel: UILabel!
     @IBOutlet weak var commentsCountLabel: UILabel!
     @IBOutlet weak var commentsTableView: UITableView!
@@ -24,8 +26,9 @@ class DetailScreenViewController: UIViewController {
         }
         
         Provider.shared.loadDetailsFrom(post: post) { [weak self] compoundResult in
-            self?.detailScreenDataSource.comments = compoundResult.comments 
+            self?.detailScreenDataSource.comments = compoundResult.comments
             self?.commentsTableView.dataSource = self?.detailScreenDataSource
+            self?.authorNameLabel.text = compoundResult.user.name
             self?.commentsCountLabel.text = "\(compoundResult.comments.count)"
             self?.postBodyLabel.text = post.body
             self?.commentsTableView.reloadData()
