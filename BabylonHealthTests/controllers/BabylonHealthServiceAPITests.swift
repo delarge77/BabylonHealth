@@ -1,8 +1,8 @@
 //
-//  BabylonHealthServiceAPITest.swift
+//  BabylonHealthServiceAPITests.swift
 //  BabylonHealth
 //
-//  Created by Alessandro dos Santos Pinto on 10/05/2017.
+//  Created by Alessandro dos Santos Pinto on 11/05/2017.
 //  Copyright © 2017 Alessandro dos Santos Pinto. All rights reserved.
 //
 
@@ -30,10 +30,6 @@ class BabylonHealthServiceAPITests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
-    }
-    
-    func testBabaquice() {
-        
     }
     
 }

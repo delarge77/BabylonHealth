@@ -17,11 +17,14 @@
 		872102D31EC3C8A100F8AE4E /* CommentObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872102D21EC3C8A100F8AE4E /* CommentObjectTests.swift */; };
 		872102D61EC3C8C900F8AE4E /* UserObjectModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872102D51EC3C8C900F8AE4E /* UserObjectModelTests.swift */; };
 		872102D81EC3C8DF00F8AE4E /* PostObjectModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872102D71EC3C8DF00F8AE4E /* PostObjectModelTests.swift */; };
-		872102DB1EC3C95400F8AE4E /* BabylonHealthServiceAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872102DA1EC3C95400F8AE4E /* BabylonHealthServiceAPITests.swift */; };
 		872102DE1EC3C97800F8AE4E /* ProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872102DD1EC3C97800F8AE4E /* ProviderTests.swift */; };
 		872102E01EC3C99F00F8AE4E /* ServiceRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872102DF1EC3C99F00F8AE4E /* ServiceRouterTests.swift */; };
 		872102E21EC3CA7D00F8AE4E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872102E11EC3CA7D00F8AE4E /* main.swift */; };
 		872102E61EC49C8000F8AE4E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 872102E81EC49C8000F8AE4E /* Localizable.strings */; };
+		872102EE1EC4A5B000F8AE4E /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 872102ED1EC4A5B000F8AE4E /* posts.json */; };
+		872102F01EC4A6CB00F8AE4E /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 872102EF1EC4A6CB00F8AE4E /* users.json */; };
+		872102F21EC4A70000F8AE4E /* comments.json in Resources */ = {isa = PBXBuildFile; fileRef = 872102F11EC4A70000F8AE4E /* comments.json */; };
+		872102F41EC4A87000F8AE4E /* BabylonHealthServiceAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872102F31EC4A87000F8AE4E /* BabylonHealthServiceAPITests.swift */; };
 		879C2E301EBCEEDC00986674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879C2E2E1EBCEEDC00986674 /* Main.storyboard */; };
 		879C2E321EBCEEDC00986674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879C2E311EBCEEDC00986674 /* Assets.xcassets */; };
 		879C2E351EBCEEDC00986674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879C2E331EBCEEDC00986674 /* LaunchScreen.storyboard */; };
@@ -77,19 +80,22 @@
 		872102D21EC3C8A100F8AE4E /* CommentObjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentObjectTests.swift; path = models/CommentObjectTests.swift; sourceTree = "<group>"; };
 		872102D51EC3C8C900F8AE4E /* UserObjectModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserObjectModelTests.swift; path = models/UserObjectModelTests.swift; sourceTree = "<group>"; };
 		872102D71EC3C8DF00F8AE4E /* PostObjectModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostObjectModelTests.swift; path = models/PostObjectModelTests.swift; sourceTree = "<group>"; };
-		872102DA1EC3C95400F8AE4E /* BabylonHealthServiceAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BabylonHealthServiceAPITests.swift; path = controllers/BabylonHealthServiceAPITests.swift; sourceTree = "<group>"; };
 		872102DD1EC3C97800F8AE4E /* ProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProviderTests.swift; path = controllers/ProviderTests.swift; sourceTree = "<group>"; };
 		872102DF1EC3C99F00F8AE4E /* ServiceRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceRouterTests.swift; path = controllers/ServiceRouterTests.swift; sourceTree = "<group>"; };
 		872102E11EC3CA7D00F8AE4E /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = "Supporting Files/main.swift"; sourceTree = "<group>"; };
 		872102E71EC49C8000F8AE4E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		872102E91EC49CAC00F8AE4E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		872102ED1EC4A5B000F8AE4E /* posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = posts.json; path = fixtures/posts.json; sourceTree = "<group>"; };
+		872102EF1EC4A6CB00F8AE4E /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = users.json; path = fixtures/users.json; sourceTree = "<group>"; };
+		872102F11EC4A70000F8AE4E /* comments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = comments.json; path = fixtures/comments.json; sourceTree = "<group>"; };
+		872102F31EC4A87000F8AE4E /* BabylonHealthServiceAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BabylonHealthServiceAPITests.swift; path = controllers/BabylonHealthServiceAPITests.swift; sourceTree = "<group>"; };
 		879C2E271EBCEEDC00986674 /* BabylonHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabylonHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879C2E2F1EBCEEDC00986674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		879C2E311EBCEEDC00986674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		879C2E341EBCEEDC00986674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		879C2E361EBCEEDC00986674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		879C2E3B1EBCEEDC00986674 /* BabylonHealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabylonHealthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		879C2E411EBCEEDC00986674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		879C2E411EBCEEDC00986674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		879C2E461EBCEEDC00986674 /* BabylonHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabylonHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		879C2E4A1EBCEEDC00986674 /* BabylonHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabylonHealthUITests.swift; sourceTree = "<group>"; };
 		879C2E4C1EBCEEDC00986674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -169,11 +175,21 @@
 		872102DC1EC3C95800F8AE4E /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				872102DA1EC3C95400F8AE4E /* BabylonHealthServiceAPITests.swift */,
 				872102DD1EC3C97800F8AE4E /* ProviderTests.swift */,
 				872102DF1EC3C99F00F8AE4E /* ServiceRouterTests.swift */,
+				872102F31EC4A87000F8AE4E /* BabylonHealthServiceAPITests.swift */,
 			);
 			name = controllers;
+			sourceTree = "<group>";
+		};
+		872102EC1EC4A4DB00F8AE4E /* fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				872102ED1EC4A5B000F8AE4E /* posts.json */,
+				872102EF1EC4A6CB00F8AE4E /* users.json */,
+				872102F11EC4A70000F8AE4E /* comments.json */,
+			);
+			name = fixtures;
 			sourceTree = "<group>";
 		};
 		879C2E1E1EBCEEDC00986674 = {
@@ -220,6 +236,7 @@
 		879C2E3E1EBCEEDC00986674 /* BabylonHealthTests */ = {
 			isa = PBXGroup;
 			children = (
+				872102EC1EC4A4DB00F8AE4E /* fixtures */,
 				872102D91EC3C8EC00F8AE4E /* Supporting Files */,
 				872102D41EC3C8A900F8AE4E /* models */,
 				872102DC1EC3C95800F8AE4E /* controllers */,
@@ -499,6 +516,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				872102F01EC4A6CB00F8AE4E /* users.json in Resources */,
+				872102EE1EC4A5B000F8AE4E /* posts.json in Resources */,
+				872102F21EC4A70000F8AE4E /* comments.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,7 +715,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				872102DB1EC3C95400F8AE4E /* BabylonHealthServiceAPITests.swift in Sources */,
+				872102F41EC4A87000F8AE4E /* BabylonHealthServiceAPITests.swift in Sources */,
 				872102D81EC3C8DF00F8AE4E /* PostObjectModelTests.swift in Sources */,
 				872102DE1EC3C97800F8AE4E /* ProviderTests.swift in Sources */,
 				872102D31EC3C8A100F8AE4E /* CommentObjectTests.swift in Sources */,
@@ -890,7 +910,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = LZASXEKJ7F;
-				INFOPLIST_FILE = BabylonHealthTests/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BabylonHealthTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.delarge.BabylonHealthTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -908,7 +928,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = LZASXEKJ7F;
-				INFOPLIST_FILE = BabylonHealthTests/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BabylonHealthTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.delarge.BabylonHealthTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
