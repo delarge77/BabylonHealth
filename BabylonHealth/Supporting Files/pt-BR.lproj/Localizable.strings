@@ -8,3 +8,4 @@
 
 
 "DetailScreenViewController.Comments" = "Comentarios";
+"DetailScreenViewController.Error" = "Por favor verifique sua conexao";

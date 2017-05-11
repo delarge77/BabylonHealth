@@ -12,6 +12,7 @@ class DetailScreenViewController: UIViewController {
 
     var post: Post?
     var detailScreenDataSource = DetailScreenDataSource()
+    @IBOutlet weak var errorLabel: UILabel!
     
     @IBOutlet weak var authorNameLabel: UILabel!
     @IBOutlet weak var postBodyLabel: UILabel!
@@ -26,6 +27,12 @@ class DetailScreenViewController: UIViewController {
         }
         
         Provider.shared.loadDetailsFrom(post: post) { [weak self] compoundResult in
+            
+            guard let compoundResult = compoundResult else {
+                self?.showErrorMessage()
+                return
+            }
+            
             self?.detailScreenDataSource.comments = compoundResult.comments
             self?.commentsTableView.dataSource = self?.detailScreenDataSource
             self?.authorNameLabel.text = compoundResult.user.name
@@ -35,5 +42,12 @@ class DetailScreenViewController: UIViewController {
             self?.commentsTableView.estimatedRowHeight = 120.0
             self?.commentsTableView.rowHeight = UITableViewAutomaticDimension
         }
+    }
+    
+    func showErrorMessage() {
+        view.bringSubview(toFront: errorLabel)
+        errorLabel.isHidden = false
+        commentsTableView.isHidden = true
+        errorLabel.text = NSLocalizedString("DetailScreenViewController.Error", comment: "")
     }
 }

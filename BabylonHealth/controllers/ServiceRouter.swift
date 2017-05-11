@@ -63,7 +63,7 @@ enum ServiceRouter: URLRequestConvertible {
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         
         urlRequest.httpMethod = method.rawValue
-        
+        urlRequest.timeoutInterval = 5.0
         return try URLEncoding.methodDependent.encode(urlRequest, with: parameters)
         
     }

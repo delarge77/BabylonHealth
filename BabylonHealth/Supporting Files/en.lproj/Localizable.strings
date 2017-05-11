@@ -8,4 +8,4 @@
 
 
 "DetailScreenViewController.Comments" = "Comments";
-
+"DetailScreenViewController.Error" = "Please check your internet connection";

@@ -31,7 +31,7 @@ extension Provider {
         }
     }
     
-    func loadDetailsFrom(post: Post, completion:@escaping (CompoundResponse) -> Void) {
+    func loadDetailsFrom(post: Post, completion:@escaping (CompoundResponse?) -> Void) {
         BabylonHealthServiceAPI.loadDetails(userConvertible: ServiceRouter.searchUser(userId: post.userId), commentsConvertible: ServiceRouter.comments(postId: post.postId)) { (result ) in
             
             switch result {
@@ -47,9 +47,11 @@ extension Provider {
                     completion(response)
                 case .error:
                     guard let user = self.getUserById(userId: post.userId) else {
+                        completion(nil)
                         return
                     }
                     guard let comments = self.getCommentsByPostId(postId: post.postId) else {
+                        completion(nil)
                         return
                     }
                     let compound = CompoundResponse(user: user, comments: comments)

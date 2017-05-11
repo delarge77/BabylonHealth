@@ -79,6 +79,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgA-W9-GTl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU4-yD-216">
                                 <rect key="frame" x="8" y="72" width="304" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -95,7 +101,7 @@
                                 <rect key="frame" x="0.0" y="96.5" width="320" height="471.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailCell" rowHeight="120" id="CEx-Ik-qHD" customClass="DetailCell" customModule="BabylonHealth" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DetailCell" rowHeight="120" id="CEx-Ik-qHD" customClass="DetailCell" customModule="BabylonHealth" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CEx-Ik-qHD" id="8Qv-r8-frm">
@@ -144,13 +150,17 @@
                         <constraints>
                             <constraint firstItem="bq7-RK-qOO" firstAttribute="top" secondItem="zql-jw-68B" secondAttribute="bottom" constant="8" id="Ck4-iM-5W1"/>
                             <constraint firstAttribute="bottom" secondItem="bq7-RK-qOO" secondAttribute="bottom" id="IHj-Y3-bIT"/>
+                            <constraint firstItem="a1Y-RU-jSU" firstAttribute="top" secondItem="EgA-W9-GTl" secondAttribute="bottom" id="Ouz-eD-9R6"/>
+                            <constraint firstItem="EgA-W9-GTl" firstAttribute="leading" secondItem="XdC-OG-Uyl" secondAttribute="leading" id="PMH-sn-Xj3"/>
                             <constraint firstAttribute="trailing" secondItem="bq7-RK-qOO" secondAttribute="trailing" id="PjH-1I-BrZ"/>
                             <constraint firstItem="a0G-oi-R5d" firstAttribute="top" secondItem="hU4-yD-216" secondAttribute="bottom" constant="8" id="Qng-1M-vRy"/>
+                            <constraint firstItem="EgA-W9-GTl" firstAttribute="top" secondItem="XdC-OG-Uyl" secondAttribute="top" id="SnX-31-xcE"/>
                             <constraint firstAttribute="trailing" secondItem="zql-jw-68B" secondAttribute="trailing" constant="8" id="YQO-WZ-VHs"/>
                             <constraint firstItem="bq7-RK-qOO" firstAttribute="leading" secondItem="XdC-OG-Uyl" secondAttribute="leading" id="YfB-i6-rZu"/>
                             <constraint firstItem="a0G-oi-R5d" firstAttribute="leading" secondItem="XdC-OG-Uyl" secondAttribute="leading" constant="8" id="erl-oN-PJA"/>
                             <constraint firstItem="zql-jw-68B" firstAttribute="leading" secondItem="XdC-OG-Uyl" secondAttribute="leading" constant="8" id="f8x-4g-8ie"/>
                             <constraint firstItem="a0G-oi-R5d" firstAttribute="top" secondItem="hU4-yD-216" secondAttribute="bottom" constant="8" id="fMQ-5z-EUC"/>
+                            <constraint firstAttribute="trailing" secondItem="EgA-W9-GTl" secondAttribute="trailing" id="gJg-Qn-qc3"/>
                             <constraint firstItem="bq7-RK-qOO" firstAttribute="top" secondItem="zql-jw-68B" secondAttribute="bottom" constant="8" id="gX2-bN-PDG"/>
                             <constraint firstAttribute="trailing" secondItem="hU4-yD-216" secondAttribute="trailing" constant="8" id="kpV-rJ-dM0"/>
                             <constraint firstItem="zql-jw-68B" firstAttribute="top" secondItem="a0G-oi-R5d" secondAttribute="bottom" constant="8" id="ksL-69-mLd"/>
@@ -166,6 +176,7 @@
                         <outlet property="authorNameLabel" destination="hU4-yD-216" id="zOZ-0Y-4UU"/>
                         <outlet property="commentsCountLabel" destination="zql-jw-68B" id="mZx-kN-NqO"/>
                         <outlet property="commentsTableView" destination="bq7-RK-qOO" id="VdC-Uy-mQL"/>
+                        <outlet property="errorLabel" destination="EgA-W9-GTl" id="gDX-yj-LKc"/>
                         <outlet property="postBodyLabel" destination="a0G-oi-R5d" id="gvm-Et-ess"/>
                     </connections>
                 </viewController>

@@ -35,7 +35,7 @@ extension Persistable {
     }
     
     func getUserById(userId: Int) -> User? {
-        return (realm?.object(ofType: UserObject.self, forPrimaryKey: userId).map {$0.user})!
+        return (realm?.object(ofType: UserObject.self, forPrimaryKey: userId).map {$0.user})
     }
     
     func getAll() -> [Post]? {
