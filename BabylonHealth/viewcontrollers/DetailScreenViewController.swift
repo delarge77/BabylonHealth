@@ -29,7 +29,7 @@ class DetailScreenViewController: UIViewController {
             self?.detailScreenDataSource.comments = compoundResult.comments
             self?.commentsTableView.dataSource = self?.detailScreenDataSource
             self?.authorNameLabel.text = compoundResult.user.name
-            self?.commentsCountLabel.text = "\(compoundResult.comments.count)"
+            self?.commentsCountLabel.text = NSLocalizedString("DetailScreenViewController.Comments", comment: "").appending(" \(compoundResult.comments.count)")
             self?.postBodyLabel.text = post.body
             self?.commentsTableView.reloadData()
             self?.commentsTableView.estimatedRowHeight = 120.0
