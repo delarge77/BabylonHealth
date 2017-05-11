@@ -26,21 +26,21 @@ class DetailScreenViewController: UIViewController {
             return
         }
         
-        Provider.shared.loadDetailsFrom(post: post) { [weak self] compoundResult in
-            
-            guard let compoundResult = compoundResult else {
+        DetailViewModel.loadDetails(post: post) { [weak self] detailModel in
+            guard let detailViewModel = detailModel else {
                 self?.showErrorMessage()
                 return
             }
             
-            self?.detailScreenDataSource.comments = compoundResult.comments
+            self?.detailScreenDataSource.comments = detailViewModel.comments
             self?.commentsTableView.dataSource = self?.detailScreenDataSource
-            self?.authorNameLabel.text = compoundResult.user.name
-            self?.commentsCountLabel.text = NSLocalizedString("DetailScreenViewController.Comments", comment: "").appending(" \(compoundResult.comments.count)")
-            self?.postBodyLabel.text = post.body
+            self?.authorNameLabel.text = detailViewModel.name
+            self?.commentsCountLabel.text = detailViewModel.numberCommentsText
+            self?.postBodyLabel.text = detailViewModel.postDescription
             self?.commentsTableView.reloadData()
             self?.commentsTableView.estimatedRowHeight = 120.0
             self?.commentsTableView.rowHeight = UITableViewAutomaticDimension
+
         }
     }
     
