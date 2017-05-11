@@ -87,7 +87,7 @@
 		879C2E2F1EBCEEDC00986674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		879C2E311EBCEEDC00986674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		879C2E341EBCEEDC00986674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		879C2E361EBCEEDC00986674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		879C2E361EBCEEDC00986674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		879C2E3B1EBCEEDC00986674 /* BabylonHealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabylonHealthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		879C2E411EBCEEDC00986674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		879C2E461EBCEEDC00986674 /* BabylonHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabylonHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -858,7 +858,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LZASXEKJ7F;
-				INFOPLIST_FILE = BabylonHealth/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BabylonHealth/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.delarge.BabylonHealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -873,7 +873,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LZASXEKJ7F;
-				INFOPLIST_FILE = BabylonHealth/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BabylonHealth/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.delarge.BabylonHealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
