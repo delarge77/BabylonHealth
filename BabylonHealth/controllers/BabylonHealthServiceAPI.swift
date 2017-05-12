@@ -36,6 +36,7 @@ extension BabylonHealthServiceAPI {
                             return
                     }
                     guard let postsObject = Mapper<PostObject>().mapArray(JSONObject: json) else {
+                        completion( .error( .jsonConversionFailure))
                         return
                     }
                     let posts = postsObject.map {$0.post}

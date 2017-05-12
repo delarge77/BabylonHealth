@@ -19,10 +19,7 @@ extension Provider {
         BabylonHealthServiceAPI.loadPosts(ServiceRouter.loadPosts) {  result in
             switch result {
                 case .success(let posts):
-                    for post in posts {
-                        let postObject = PostObject(post: post)
-                        self.insert(item: postObject, update: true)
-                    }
+                    self.insertPosts(posts: posts, update: true)
                     completion(posts)
                 case .error:
                     let posts = self.getAll()
@@ -39,11 +36,7 @@ extension Provider {
                     let user = response.user
                     let userObject = UserObject(user: user)
                     self.insert(item: userObject, update: true)
-                    let comments = response.comments
-                    for com in comments {
-                        let commentsObject = CommentObject(comment: com)
-                        self.insert(item: commentsObject, update: true)
-                    }
+                    self.insertComments(comments: response.comments, update: true)
                     completion(response)
                 case .error:
                     guard let user = self.getUserById(userId: post.userId) else {

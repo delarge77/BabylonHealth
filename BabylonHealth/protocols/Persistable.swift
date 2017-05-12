@@ -19,7 +19,8 @@ protocol Persistable {
     func getCommentsByPostId(postId: Int) -> [C]?
     func insert<T: Object>(item: T, update: Bool)
     func getUserById(userId: Int) -> U?
-//    func addObjects<T>(items: T, update:Bool) where T : Object
+    func insertPosts(posts: [Post], update: Bool)
+    func insertComments(comments: [C], update: Bool)
 }
 
 extension Persistable {
@@ -46,8 +47,17 @@ extension Persistable {
         return realm?.objects(CommentObject.self).filter("postId == %@", postId).map {$0.comment}
     }
     
-//    func addObjects<T>(items: T, update:Bool) where T : Object {
-//        return realm?.objects(item)
-//        realm?.add(items, update: update)
-//    }
+    func insertPosts(posts: [Post], update: Bool) {
+        let posts = posts.map({ PostObject(post: $0) })
+        try? realm?.write {
+            realm?.add(posts, update:update)
+        }
+    }
+    
+    func insertComments(comments: [Comment], update: Bool) {
+        let comments = comments.map({ CommentObject(comment: $0) })
+        try? realm?.write {
+            realm?.add(comments, update:update)
+        }
+    }
 }
