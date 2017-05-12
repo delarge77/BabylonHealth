@@ -19,7 +19,7 @@ protocol Persistable {
     func getCommentsByPostId(postId: Int) -> [C]?
     func insert<T: Object>(item: T, update: Bool)
     func getUserById(userId: Int) -> U?
-    func insertPosts(posts: [Post], update: Bool)
+    func insertPosts(posts: [T], update: Bool)
     func insertComments(comments: [C], update: Bool)
 }
 
