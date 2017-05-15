@@ -23,7 +23,6 @@ struct DetailViewModel {
             
             let detailModel = Detail(name: name, comments: detail.comments, postDescription: post.body, numberCommentsText: numberOfCommentsText)
             completion(detailModel)
-            
         }
     }
     

@@ -8,19 +8,19 @@
 
 import UIKit
 
-class PostScreenDataSource: NSObject, UITableViewDataSource {
+class DataSource<T, C: UITableViewCell>: NSObject, UITableViewDataSource where C: Reusable, C.T == T {
     
-    var posts = [Post]()
+    var objects = [T]()
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as PostCell
-        let post = posts[indexPath.row]
-        cell.setUp(post)
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as C
+        let object = objects[indexPath.row]
+        cell.setUp(object)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return objects.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

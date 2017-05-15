@@ -9,15 +9,17 @@
 import Foundation
 import UIKit
 
-protocol Reusable {}
+protocol Reusable {
+    associatedtype T
+    
+    func setUp(_: T)
+}
 
 extension Reusable where Self: UITableViewCell {
     static var reuseIdentifier: String {
         return String(describing: self)
     }
 }
-
-extension UITableViewCell: Reusable {}
 
 extension UITableView {
     

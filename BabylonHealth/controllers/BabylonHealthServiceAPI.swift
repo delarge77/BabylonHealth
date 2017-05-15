@@ -9,9 +9,11 @@
 import Foundation
 import Alamofire
 import ObjectMapper
-import RealmSwift
 
 struct BabylonHealthServiceAPI {
+    
+    static let shared = BabylonHealthServiceAPI()
+    
     typealias PostsBlock = (APIResult<[Post]>) -> Void
     typealias DetailsBlock = (APIResult<CompoundResponse>) -> Void
     typealias UserDetailsBlock = (APIResult<User>) -> Void
@@ -20,7 +22,7 @@ struct BabylonHealthServiceAPI {
 
 extension BabylonHealthServiceAPI {
     
-    static func loadPosts(_ posts: URLRequestConvertible, completion: @escaping PostsBlock) {
+    func load(_ posts: URLRequestConvertible, completion: @escaping PostsBlock) {
         Alamofire.request(posts).responseJSON(completionHandler: { response in
             
             guard let httpResponse = response.response else {
@@ -50,9 +52,9 @@ extension BabylonHealthServiceAPI {
         })
     }
     
-    static func loadDetails(userConvertible: URLRequestConvertible,
-                            commentsConvertible: URLRequestConvertible,
-                            completion: @escaping DetailsBlock) {
+    func loadDetails(userConvertible: URLRequestConvertible,
+                     commentsConvertible: URLRequestConvertible,
+                     completion: @escaping DetailsBlock) {
         
         var user: User? = nil
         var comments: [Comment]? = nil
@@ -96,7 +98,7 @@ extension BabylonHealthServiceAPI {
         }
     }
     
-    static func load(user: URLRequestConvertible, completion: @escaping UserDetailsBlock) {
+    func load(user: URLRequestConvertible, completion: @escaping UserDetailsBlock) {
         
         Alamofire.request(user).responseJSON(completionHandler: { response in
             
@@ -127,7 +129,7 @@ extension BabylonHealthServiceAPI {
         })
     }
     
-    static func load(comments: URLRequestConvertible, completion: @escaping CommentsBlock) {
+    func load(comments: URLRequestConvertible, completion: @escaping CommentsBlock) {
         
         Alamofire.request(comments).responseJSON(completionHandler: { response in
             
@@ -158,14 +160,14 @@ extension BabylonHealthServiceAPI {
     }
 }
 
-enum APIResult <T> {
-    case success(T)
-    case error(BabylonHealthApiError)
-}
-
 struct CompoundResponse {
     let user: User
     let comments: [Comment]
+}
+
+enum APIResult<T> {
+    case success(T)
+    case error(BabylonHealthApiError)
 }
 
 enum BabylonHealthApiError: Error {

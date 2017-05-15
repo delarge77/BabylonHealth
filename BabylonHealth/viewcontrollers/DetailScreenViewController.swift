@@ -11,7 +11,7 @@ import UIKit
 class DetailScreenViewController: UIViewController {
 
     var post: Post?
-    var detailScreenDataSource = DetailScreenDataSource()
+    var detailScreenDataSource = DataSource<Comment, DetailCell>()
     @IBOutlet weak var errorLabel: UILabel!
     
     @IBOutlet weak var authorNameLabel: UILabel!
@@ -32,7 +32,7 @@ class DetailScreenViewController: UIViewController {
                 return
             }
             
-            self?.detailScreenDataSource.comments = detailViewModel.comments
+            self?.detailScreenDataSource.objects = detailViewModel.comments
             self?.commentsTableView.dataSource = self?.detailScreenDataSource
             self?.authorNameLabel.text = detailViewModel.name
             self?.commentsCountLabel.text = detailViewModel.numberCommentsText

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import RealmSwift
 
 struct Provider: Persistable {
     static let shared = Provider()
@@ -16,7 +15,7 @@ struct Provider: Persistable {
 extension Provider {
     
     func loadPosts(completion:@escaping ([Post]?) -> Void) {
-        BabylonHealthServiceAPI.loadPosts(ServiceRouter.loadPosts) {  result in
+        BabylonHealthServiceAPI.shared.load(ServiceRouter.loadPosts) {  result in
             switch result {
                 case .success(let posts):
                     self.insertPosts(posts: posts, update: true)
@@ -29,7 +28,7 @@ extension Provider {
     }
     
     func loadDetailsFrom(post: Post, completion:@escaping (CompoundResponse?) -> Void) {
-        BabylonHealthServiceAPI.loadDetails(userConvertible: ServiceRouter.searchUser(userId: post.userId), commentsConvertible: ServiceRouter.comments(postId: post.postId)) { (result ) in
+        BabylonHealthServiceAPI.shared.loadDetails(userConvertible: ServiceRouter.searchUser(userId: post.userId), commentsConvertible: ServiceRouter.comments(postId: post.postId)) { (result ) in
             
             switch result {
                 case .success(let response):

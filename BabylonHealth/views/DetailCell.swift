@@ -12,14 +12,9 @@ class DetailCell: UITableViewCell, CellTextPresentable {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
-    
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
+}
+
+extension DetailCell: Reusable {
     
     func setUp(_ comment: Comment) {
         nameLabel.text = comment.name

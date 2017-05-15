@@ -10,7 +10,7 @@ import UIKit
 
 class PostsScreenTableViewController: UITableViewController {
 
-    var postScreenDataSource = PostScreenDataSource()
+    var postScreenDataSource = DataSource<Post, PostCell>()
     
     override func viewDidLoad() {
         
@@ -20,7 +20,7 @@ class PostsScreenTableViewController: UITableViewController {
         extendedLayoutIncludesOpaqueBars = true
         
         Provider.shared.loadPosts { [weak self] (posts) in
-            self?.postScreenDataSource.posts = posts ?? []
+            self?.postScreenDataSource.objects = posts ?? []
             self?.tableView.dataSource = self?.postScreenDataSource
             self?.tableView.reloadData()
             self?.tableView.estimatedRowHeight = 120.0
@@ -34,7 +34,7 @@ class PostsScreenTableViewController: UITableViewController {
         if let destination = segue.destination as? DetailScreenViewController,
             let cell = sender as? UITableViewCell,
             let indexPath = self.tableView.indexPath(for: cell) {
-            destination.post = postScreenDataSource.posts[indexPath.row]
+            destination.post = postScreenDataSource.objects[indexPath.row]
         }
     }
 }
