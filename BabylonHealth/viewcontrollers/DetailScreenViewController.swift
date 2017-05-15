@@ -12,7 +12,6 @@ class DetailScreenViewController: UIViewController {
 
     var post: Post?
     var detailScreenDataSource = DataSource<Comment, DetailCell>()
-    @IBOutlet weak var errorLabel: UILabel!
     
     @IBOutlet weak var authorNameLabel: UILabel!
     @IBOutlet weak var postBodyLabel: UILabel!
@@ -28,7 +27,6 @@ class DetailScreenViewController: UIViewController {
         
         DetailViewModel.loadDetails(post: post) { [weak self] detailModel in
             guard let detailViewModel = detailModel else {
-                self?.showErrorMessage()
                 return
             }
             
@@ -42,12 +40,5 @@ class DetailScreenViewController: UIViewController {
             self?.commentsTableView.rowHeight = UITableViewAutomaticDimension
 
         }
-    }
-    
-    func showErrorMessage() {
-        view.bringSubview(toFront: errorLabel)
-        errorLabel.isHidden = false
-        commentsTableView.isHidden = true
-        errorLabel.text = NSLocalizedString("DetailScreenViewController.Error", comment: "")
     }
 }
