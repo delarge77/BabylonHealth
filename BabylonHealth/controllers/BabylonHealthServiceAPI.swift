@@ -15,41 +15,26 @@ struct BabylonHealthServiceAPI {
     static let shared = BabylonHealthServiceAPI()
     
     typealias PostsBlock = (APIResult<[Post]>) -> Void
-    typealias DetailsBlock = (APIResult<CompoundResponse>) -> Void
+    typealias DetailsBlock = (APIResult<(User, [Comment])>) -> Void
     typealias UserDetailsBlock = (APIResult<User>) -> Void
     typealias CommentsBlock = (APIResult<[Comment]>) -> Void
 }
 
 extension BabylonHealthServiceAPI {
-    
     func load(_ posts: URLRequestConvertible, completion: @escaping PostsBlock) {
-        Alamofire.request(posts).responseJSON(completionHandler: { response in
-            
-            guard let httpResponse = response.response else {
-                completion( .error(. requestFailed))
-                return
-            }
-            
-            if httpResponse.statusCode == 200 {
-                if let data = response.data {
-                    guard let object = try? JSONSerialization.jsonObject(with:data),
-                        let json = object as? NSArray else {
-                            completion( .error( .jsonConversionFailure))
-                            return
-                    }
+        Alamofire.request(posts).responseArray { json in
+            switch json {
+                case .success(let json):
                     guard let postsObject = Mapper<PostObject>().mapArray(JSONObject: json) else {
                         completion( .error( .jsonConversionFailure))
                         return
                     }
                     let posts = postsObject.map {$0.post}
                     completion( .success(posts))
-                } else {
-                    completion( .error( .invalidData))
-                }
-            } else {
-                completion( .error( .responseUnsuccessful))
+                case .error :
+                    completion( .error( .responseUnsuccessful))
             }
-        })
+        }
     }
     
     func loadDetails(userConvertible: URLRequestConvertible,
@@ -92,77 +77,64 @@ extension BabylonHealthServiceAPI {
                 completion( .error( .responseUnsuccessful))
                 return
             }
-            
-            let result = CompoundResponse(user: user, comments: comments)
-            completion(.success(result))
+            completion(.success((user, comments)))
         }
     }
     
     func load(user: URLRequestConvertible, completion: @escaping UserDetailsBlock) {
-        
-        Alamofire.request(user).responseJSON(completionHandler: { response in
-            
-            guard let httpResponse = response.response else {
-                completion( .error(. requestFailed))
-                return
-            }
-
-            if httpResponse.statusCode == 200 {
-                if let data = response.data {
-                    guard let object = try? JSONSerialization.jsonObject(with:data),
-                        let json = object as? NSArray else {
-                            completion( .error( .jsonConversionFailure))
-                            return
-                    }
-                    
+        Alamofire.request(user).responseArray { json in
+            switch json {
+                case .success(let json):
                     guard let userObject = Mapper<UserObject>().map(JSONObject: json.firstObject) else {
+                        completion( .error( .jsonConversionFailure))
                         return
                     }
                     completion( .success(userObject.user))
-
-                } else {
-                    completion( .error( .invalidData))
-                }
-            } else {
-                completion( .error( .responseUnsuccessful))
+                case .error :
+                    completion( .error( .responseUnsuccessful))
             }
-        })
+        }
     }
     
     func load(comments: URLRequestConvertible, completion: @escaping CommentsBlock) {
-        
-        Alamofire.request(comments).responseJSON(completionHandler: { response in
-            
-            guard let httpResponse = response.response else {
-                completion( .error(. requestFailed))
-                return
-            }
-
-            if httpResponse.statusCode == 200 {
-                if let data = response.data {
-                    guard let object = try? JSONSerialization.jsonObject(with:data),
-                        let json = object as? NSArray else {
-                            completion( .error( .jsonConversionFailure))
-                            return
-                    }
+        Alamofire.request(comments).responseArray { json in
+            switch json {
+                case .success(let json):
                     guard let commentObjects = Mapper<CommentObject>().mapArray(JSONObject: json) else {
                         return
                     }
                     let comments = commentObjects.map {$0.comment}
                     completion( .success(comments))
-                } else {
-                    completion( .error( .invalidData))
+                case .error :
+                    completion( .error( .responseUnsuccessful))
+            }
+        }
+    }
+}
+
+extension DataRequest {
+    @discardableResult
+    func responseArray(completion: @escaping (APIResult<NSArray>) -> Void) -> Self {
+        return responseJSON { response in
+            guard let httpResponse = response.response else {
+                completion( .error( .requestFailed))
+                return
+            }
+            
+            if httpResponse.statusCode == 200 {
+                if let data = response.data {
+                    guard let object = try? JSONSerialization.jsonObject(with:data),
+                        let json = object as? NSArray else {
+                            completion( .error( .jsonConversionFailure))
+                            return
+                    }
+                    completion( .success(json))
                 }
             } else {
                 completion( .error( .responseUnsuccessful))
             }
-        })
+        }
     }
-}
-
-struct CompoundResponse {
-    let user: User
-    let comments: [Comment]
 }
 
 enum APIResult<T> {

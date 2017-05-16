@@ -18,13 +18,13 @@ class PostsScreenTableViewController: UITableViewController {
         splitViewController?.delegate = self
         splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.allVisible
         extendedLayoutIncludesOpaqueBars = true
+        tableView.estimatedRowHeight = 120.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.dataSource = postScreenDataSource
         
         Provider.shared.loadPosts { [weak self] (posts) in
             self?.postScreenDataSource.objects = posts ?? []
-            self?.tableView.dataSource = self?.postScreenDataSource
             self?.tableView.reloadData()
-            self?.tableView.estimatedRowHeight = 120.0
-            self?.tableView.rowHeight = UITableViewAutomaticDimension
         }
     }
 

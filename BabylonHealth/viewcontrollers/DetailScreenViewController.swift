@@ -20,6 +20,10 @@ class DetailScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        commentsTableView.estimatedRowHeight = 120.0
+        commentsTableView.rowHeight = UITableViewAutomaticDimension
+        commentsTableView.dataSource = detailScreenDataSource
 
         guard let post = post else {
             return
@@ -31,14 +35,10 @@ class DetailScreenViewController: UIViewController {
             }
             
             self?.detailScreenDataSource.objects = detailViewModel.comments
-            self?.commentsTableView.dataSource = self?.detailScreenDataSource
             self?.authorNameLabel.text = detailViewModel.name
             self?.commentsCountLabel.text = detailViewModel.numberCommentsText
             self?.postBodyLabel.text = detailViewModel.postDescription
             self?.commentsTableView.reloadData()
-            self?.commentsTableView.estimatedRowHeight = 120.0
-            self?.commentsTableView.rowHeight = UITableViewAutomaticDimension
-
         }
     }
 }

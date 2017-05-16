@@ -27,7 +27,6 @@ enum ServiceRouter: URLRequestConvertible {
             
         case .comments:
             return APIEndpoints.comments
-            
         }
     }
     
@@ -65,7 +64,6 @@ enum ServiceRouter: URLRequestConvertible {
         urlRequest.httpMethod = method.rawValue
         urlRequest.timeoutInterval = 5.0
         return try URLEncoding.methodDependent.encode(urlRequest, with: parameters)
-        
     }
 }
 

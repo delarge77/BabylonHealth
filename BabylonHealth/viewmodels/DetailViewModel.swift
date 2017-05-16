@@ -21,17 +21,17 @@ struct DetailViewModel {
             let name = formatUserName(detail)
             let numberOfCommentsText = numberOfComments(detail)
             
-            let detailModel = Detail(name: name, comments: detail.comments, postDescription: post.body, numberCommentsText: numberOfCommentsText)
+            let detailModel = Detail(name: name, comments: detail.1, postDescription: post.body, numberCommentsText: numberOfCommentsText)
             completion(detailModel)
         }
     }
     
-    static func formatUserName(_ detail: CompoundResponse) -> String {
-        return detail.user.name
+    static func formatUserName(_ detail: (User, [Comment])) -> String {
+        return detail.0.name
     }
     
-    static func numberOfComments(_ detail: CompoundResponse) -> String {
-        return NSLocalizedString("DetailScreenViewController.Comments", comment: "").appending(" \(detail.comments.count)")
+    static func numberOfComments(_ detail: (User, [Comment])) -> String {
+        return NSLocalizedString("DetailScreenViewController.Comments", comment: "").appending(" \(detail.1.count)")
     }
 }
 

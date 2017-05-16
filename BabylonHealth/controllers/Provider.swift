@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias Details = (user: User, comments: [Comment])
+
 struct Provider: Persistable {
     static let shared = Provider()
 }
@@ -27,11 +29,11 @@ extension Provider {
         }
     }
     
-    func loadDetailsFrom(post: Post, completion:@escaping (CompoundResponse?) -> Void) {
+    func loadDetailsFrom(post: Post, completion:@escaping ((User, [Comment])?) -> Void) {
         BabylonHealthServiceAPI.shared.loadDetails(userConvertible: ServiceRouter.searchUser(userId: post.userId), commentsConvertible: ServiceRouter.comments(postId: post.postId)) { (result ) in
             
             switch result {
-                case .success(let response):
+            case .success(let response as Details):
                     let user = response.user
                     let userObject = UserObject(user: user)
                     self.insert(item: userObject, update: true)
@@ -46,8 +48,7 @@ extension Provider {
                         completion(nil)
                         return
                     }
-                    let compound = CompoundResponse(user: user, comments: comments)
-                    completion(compound)
+                    completion((user, comments))
             }
         }
     }
