@@ -15,11 +15,13 @@ import XCTest
 
 class ProviderTests: XCTestCase {
     
+    let provider = Provider()
+    
     func testConnection() {
         
         let expec = expectation(description: "")
         
-        Provider.shared.loadPosts { posts in
+        provider.loadPosts {  (posts) in
             XCTAssertNotNil(posts, "must not be nil")
             expec.fulfill()
         }
@@ -43,7 +45,7 @@ class ProviderTests: XCTestCase {
             )
         }
         
-        Provider.shared.loadPosts { posts in
+        provider.loadPosts {  (posts) in
             XCTAssertNotNil(posts, "must be nil")
             expec.fulfill()
         }
@@ -62,7 +64,7 @@ class ProviderTests: XCTestCase {
             return OHHTTPStubsResponse(jsonObject:[], statusCode:404, headers:nil)
         }
         
-        Provider.shared.loadPosts { posts in
+        provider.loadPosts {  (posts) in
             XCTAssertNotNil(posts, "must be nil")
             expec.fulfill()
         }
@@ -79,8 +81,8 @@ class ProviderTests: XCTestCase {
         
         let post = Post(userId: 1, postId: 1, title: "hsduhaduh", body: "sdjaisajdisajd")
         
-        Provider.shared.loadDetailsFrom(post: post) { compoundResult in
-            XCTAssertNotNil(compoundResult, "must not be nil")
+        provider.loadDetailsFrom(post: post) { response in
+            XCTAssertNotNil(response, "must not be nil")
             expec.fulfill()
         }
         
@@ -100,8 +102,8 @@ class ProviderTests: XCTestCase {
         
         let post = Post(userId: 1, postId: 1, title: "hsduhaduh", body: "sdjaisajdisajd")
         
-        Provider.shared.loadDetailsFrom(post: post) { compoundResult in
-            XCTAssertNotNil(compoundResult, "must not be nil")
+        provider.loadDetailsFrom(post: post) { response in
+            XCTAssertNotNil(response, "must not be nil")
             expec.fulfill()
         }
         
@@ -121,8 +123,8 @@ class ProviderTests: XCTestCase {
         
         let post = Post(userId: 0, postId: 1, title: "hsduhaduh", body: "sdjaisajdisajd")
         
-        Provider.shared.loadDetailsFrom(post: post) { compoundResult in
-            XCTAssertNil(compoundResult, "must be nil")
+        provider.loadDetailsFrom(post: post) { response in
+            XCTAssertNil(response, "must be nil")
             expec.fulfill()
         }
         
@@ -142,10 +144,10 @@ class ProviderTests: XCTestCase {
         
         let post = Post(userId: 1, postId: 0, title: "hsduhaduh", body: "sdjaisajdisajd")
         
-        //Provider.shared.loadDetailsFrom(post: post) { compoundResult in
-            //XCTAssertEqual(compoundResult?.comments.count, 0, "Value must be 0")
-            //expec.fulfill()
-        //}
+        provider.loadDetailsFrom(post: post) { response in
+            XCTAssertEqual(response?.comments.count, 0, "Value must be 0")
+            expec.fulfill()
+        }
         
         waitForExpectations(timeout: 10) { error in
             if let error = error {

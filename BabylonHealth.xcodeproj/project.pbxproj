@@ -24,6 +24,7 @@
 		872102F01EC4A6CB00F8AE4E /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 872102EF1EC4A6CB00F8AE4E /* users.json */; };
 		872102F21EC4A70000F8AE4E /* comments.json in Resources */ = {isa = PBXBuildFile; fileRef = 872102F11EC4A70000F8AE4E /* comments.json */; };
 		872102F41EC4A87000F8AE4E /* BabylonHealthServiceAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872102F31EC4A87000F8AE4E /* BabylonHealthServiceAPITests.swift */; };
+		875300B31ECB42FB0067B317 /* DataRequest+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875300B21ECB42FB0067B317 /* DataRequest+Request.swift */; };
 		876CA6FC1EC4E69F00A2EA78 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CA6FB1EC4E69F00A2EA78 /* DetailViewModel.swift */; };
 		879C2E301EBCEEDC00986674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879C2E2E1EBCEEDC00986674 /* Main.storyboard */; };
 		879C2E321EBCEEDC00986674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879C2E311EBCEEDC00986674 /* Assets.xcassets */; };
@@ -89,6 +90,7 @@
 		872102EF1EC4A6CB00F8AE4E /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = users.json; path = fixtures/users.json; sourceTree = "<group>"; };
 		872102F11EC4A70000F8AE4E /* comments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = comments.json; path = fixtures/comments.json; sourceTree = "<group>"; };
 		872102F31EC4A87000F8AE4E /* BabylonHealthServiceAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BabylonHealthServiceAPITests.swift; path = controllers/BabylonHealthServiceAPITests.swift; sourceTree = "<group>"; };
+		875300B21ECB42FB0067B317 /* DataRequest+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DataRequest+Request.swift"; path = "extensions/DataRequest+Request.swift"; sourceTree = "<group>"; };
 		876CA6FB1EC4E69F00A2EA78 /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewModel.swift; path = viewmodels/DetailViewModel.swift; sourceTree = "<group>"; };
 		879C2E271EBCEEDC00986674 /* BabylonHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabylonHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879C2E2F1EBCEEDC00986674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 		879C2E651EBCF26300986674 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				875300B21ECB42FB0067B317 /* DataRequest+Request.swift */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -718,6 +721,7 @@
 				876CA6FC1EC4E69F00A2EA78 /* DetailViewModel.swift in Sources */,
 				87E809361EC27A6C00DAD709 /* Post.swift in Sources */,
 				8715E4581EC08132005EE564 /* DetailCell.swift in Sources */,
+				875300B31ECB42FB0067B317 /* DataRequest+Request.swift in Sources */,
 				8715E4541EC070BD005EE564 /* CommentObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

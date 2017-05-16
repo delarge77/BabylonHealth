@@ -109,31 +109,6 @@ extension BabylonHealthServiceAPI {
     }
 }
 
-extension DataRequest {
-    @discardableResult
-    func responseArray(completion: @escaping (APIResult<NSArray>) -> Void) -> Self {
-        return responseJSON { response in
-            guard let httpResponse = response.response else {
-                completion( .error( .requestFailed))
-                return
-            }
-            
-            if httpResponse.statusCode == 200 {
-                if let data = response.data {
-                    guard let object = try? JSONSerialization.jsonObject(with:data),
-                        let json = object as? NSArray else {
-                            completion( .error( .jsonConversionFailure))
-                            return
-                    }
-                    completion( .success(json))
-                }
-            } else {
-                completion( .error( .responseUnsuccessful))
-            }
-        }
-    }
-}
-
 enum APIResult<T> {
     case success(T)
     case error(BabylonHealthApiError)
