@@ -11,27 +11,28 @@ import Foundation
 struct DetailViewModel {
     
     static func loadDetails(post: Post, completion:@escaping (Detail?) -> Void) {
-        Provider.shared.loadDetailsFrom(post: post) { result in
+        let provider = Provider()
+        provider.loadDetailsFrom(post: post) { result in
             
-            guard let detail = result else {
+            guard let result = result else {
                 completion(nil)
                 return
             }
             
-            let name = formatUserName(detail)
-            let numberOfCommentsText = numberOfComments(detail)
+            let name = formatUserName(result)
+            let numberOfCommentsText = numberOfComments(result)
             
-            let detailModel = Detail(name: name, comments: detail.1, postDescription: post.body, numberCommentsText: numberOfCommentsText)
+            let detailModel = Detail(name: name, comments: result.comments, postDescription: post.body, numberCommentsText: numberOfCommentsText)
             completion(detailModel)
         }
     }
     
-    static func formatUserName(_ detail: (User, [Comment])) -> String {
-        return detail.0.name
+    static func formatUserName(_ detail: CompoundDetail) -> String {
+        return detail.user.name
     }
     
-    static func numberOfComments(_ detail: (User, [Comment])) -> String {
-        return NSLocalizedString("DetailScreenViewController.Comments", comment: "").appending(" \(detail.1.count)")
+    static func numberOfComments(_ detail: CompoundDetail) -> String {
+        return NSLocalizedString("DetailScreenViewController.Comments", comment: "").appending(" \(detail.comments.count)")
     }
 }
 

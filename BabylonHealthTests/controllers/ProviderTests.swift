@@ -142,10 +142,10 @@ class ProviderTests: XCTestCase {
         
         let post = Post(userId: 1, postId: 0, title: "hsduhaduh", body: "sdjaisajdisajd")
         
-        Provider.shared.loadDetailsFrom(post: post) { compoundResult in
-            XCTAssertEqual(compoundResult?.comments.count, 0, "Value must be 0")
-            expec.fulfill()
-        }
+        //Provider.shared.loadDetailsFrom(post: post) { compoundResult in
+            //XCTAssertEqual(compoundResult?.comments.count, 0, "Value must be 0")
+            //expec.fulfill()
+        //}
         
         waitForExpectations(timeout: 10) { error in
             if let error = error {

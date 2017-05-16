@@ -11,11 +11,8 @@ import Alamofire
 import ObjectMapper
 
 struct BabylonHealthServiceAPI {
-    
-    static let shared = BabylonHealthServiceAPI()
-    
     typealias PostsBlock = (APIResult<[Post]>) -> Void
-    typealias DetailsBlock = (APIResult<(User, [Comment])>) -> Void
+    typealias DetailsBlock = (APIResult<CompoundDetail>) -> Void
     typealias UserDetailsBlock = (APIResult<User>) -> Void
     typealias CommentsBlock = (APIResult<[Comment]>) -> Void
 }

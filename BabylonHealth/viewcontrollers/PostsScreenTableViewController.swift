@@ -22,7 +22,8 @@ class PostsScreenTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.dataSource = postScreenDataSource
         
-        Provider.shared.loadPosts { [weak self] (posts) in
+        let provider = Provider()
+        provider.loadPosts { [weak self] (posts) in
             self?.postScreenDataSource.objects = posts ?? []
             self?.tableView.reloadData()
         }

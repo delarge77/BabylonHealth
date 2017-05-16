@@ -8,16 +8,18 @@
 
 import Foundation
 
-typealias Details = (user: User, comments: [Comment])
+typealias CompoundDetail = (user: User, comments: [Comment])
 
 struct Provider: Persistable {
-    static let shared = Provider()
-}
-
-extension Provider {
+    
+    let service: BabylonHealthServiceAPI
+    
+    init(service: BabylonHealthServiceAPI = BabylonHealthServiceAPI()) {
+        self.service = service
+    }
     
     func loadPosts(completion:@escaping ([Post]?) -> Void) {
-        BabylonHealthServiceAPI.shared.load(ServiceRouter.loadPosts) {  result in
+        service.load(ServiceRouter.loadPosts) {  result in
             switch result {
                 case .success(let posts):
                     self.insertPosts(posts: posts, update: true)
@@ -29,11 +31,11 @@ extension Provider {
         }
     }
     
-    func loadDetailsFrom(post: Post, completion:@escaping ((User, [Comment])?) -> Void) {
-        BabylonHealthServiceAPI.shared.loadDetails(userConvertible: ServiceRouter.searchUser(userId: post.userId), commentsConvertible: ServiceRouter.comments(postId: post.postId)) { (result ) in
+    func loadDetailsFrom(post: Post, completion:@escaping (CompoundDetail?) -> Void) {
+        service.loadDetails(userConvertible: ServiceRouter.searchUser(userId: post.userId), commentsConvertible: ServiceRouter.comments(postId: post.postId)) { result in
             
             switch result {
-            case .success(let response as Details):
+            case .success(let response):
                     let user = response.user
                     let userObject = UserObject(user: user)
                     self.insert(item: userObject, update: true)
