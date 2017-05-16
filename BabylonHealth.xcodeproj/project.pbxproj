@@ -11,7 +11,6 @@
 		8715E44E1EBDF667005EE564 /* ServiceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8715E44D1EBDF667005EE564 /* ServiceRouter.swift */; };
 		8715E4521EC06D0E005EE564 /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8715E4511EC06D0E005EE564 /* UserObject.swift */; };
 		8715E4541EC070BD005EE564 /* CommentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8715E4531EC070BD005EE564 /* CommentObject.swift */; };
-		8715E4581EC08132005EE564 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8715E4571EC08132005EE564 /* DetailCell.swift */; };
 		8715E45D1EC0B89D005EE564 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8715E45C1EC0B89D005EE564 /* Persistable.swift */; };
 		872102D31EC3C8A100F8AE4E /* CommentObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872102D21EC3C8A100F8AE4E /* CommentObjectTests.swift */; };
 		872102D61EC3C8C900F8AE4E /* UserObjectModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872102D51EC3C8C900F8AE4E /* UserObjectModelTests.swift */; };
@@ -25,6 +24,8 @@
 		872102F21EC4A70000F8AE4E /* comments.json in Resources */ = {isa = PBXBuildFile; fileRef = 872102F11EC4A70000F8AE4E /* comments.json */; };
 		872102F41EC4A87000F8AE4E /* BabylonHealthServiceAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872102F31EC4A87000F8AE4E /* BabylonHealthServiceAPITests.swift */; };
 		875300B31ECB42FB0067B317 /* DataRequest+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875300B21ECB42FB0067B317 /* DataRequest+Request.swift */; };
+		8760C9BF1ECB54490003F2B7 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760C9BD1ECB54490003F2B7 /* DetailCell.swift */; };
+		8760C9C01ECB54490003F2B7 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760C9BE1ECB54490003F2B7 /* PostCell.swift */; };
 		876CA6FC1EC4E69F00A2EA78 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CA6FB1EC4E69F00A2EA78 /* DetailViewModel.swift */; };
 		879C2E301EBCEEDC00986674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879C2E2E1EBCEEDC00986674 /* Main.storyboard */; };
 		879C2E321EBCEEDC00986674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879C2E311EBCEEDC00986674 /* Assets.xcassets */; };
@@ -34,7 +35,6 @@
 		879C2E631EBCF1E000986674 /* PostsScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E621EBCF1E000986674 /* PostsScreenTableViewController.swift */; };
 		879C2E691EBCF4AE00986674 /* BabylonHealthServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E681EBCF4AE00986674 /* BabylonHealthServiceAPI.swift */; };
 		879C2E6B1EBCF6E500986674 /* PostObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E6A1EBCF6E500986674 /* PostObject.swift */; };
-		879C2E6F1EBD1DFA00986674 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E6E1EBD1DFA00986674 /* PostCell.swift */; };
 		879C2E711EBD2A4500986674 /* CellTextPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E701EBD2A4500986674 /* CellTextPresentable.swift */; };
 		879C2E731EBD321300986674 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E721EBD321300986674 /* DataSource.swift */; };
 		879C2E761EBD330E00986674 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E751EBD330E00986674 /* Reusable.swift */; };
@@ -76,7 +76,6 @@
 		8715E44D1EBDF667005EE564 /* ServiceRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceRouter.swift; path = controllers/ServiceRouter.swift; sourceTree = "<group>"; };
 		8715E4511EC06D0E005EE564 /* UserObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserObject.swift; path = models/persistentModel/UserObject.swift; sourceTree = "<group>"; };
 		8715E4531EC070BD005EE564 /* CommentObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentObject.swift; path = models/persistentModel/CommentObject.swift; sourceTree = "<group>"; };
-		8715E4571EC08132005EE564 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailCell.swift; path = views/DetailCell.swift; sourceTree = "<group>"; };
 		8715E45C1EC0B89D005EE564 /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Persistable.swift; path = protocols/Persistable.swift; sourceTree = "<group>"; };
 		872102D21EC3C8A100F8AE4E /* CommentObjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentObjectTests.swift; path = models/CommentObjectTests.swift; sourceTree = "<group>"; };
 		872102D51EC3C8C900F8AE4E /* UserObjectModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserObjectModelTests.swift; path = models/UserObjectModelTests.swift; sourceTree = "<group>"; };
@@ -91,6 +90,8 @@
 		872102F11EC4A70000F8AE4E /* comments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = comments.json; path = fixtures/comments.json; sourceTree = "<group>"; };
 		872102F31EC4A87000F8AE4E /* BabylonHealthServiceAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BabylonHealthServiceAPITests.swift; path = controllers/BabylonHealthServiceAPITests.swift; sourceTree = "<group>"; };
 		875300B21ECB42FB0067B317 /* DataRequest+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DataRequest+Request.swift"; path = "extensions/DataRequest+Request.swift"; sourceTree = "<group>"; };
+		8760C9BD1ECB54490003F2B7 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailCell.swift; path = views/cells/DetailCell.swift; sourceTree = "<group>"; };
+		8760C9BE1ECB54490003F2B7 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostCell.swift; path = views/cells/PostCell.swift; sourceTree = "<group>"; };
 		876CA6FB1EC4E69F00A2EA78 /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewModel.swift; path = viewmodels/DetailViewModel.swift; sourceTree = "<group>"; };
 		879C2E271EBCEEDC00986674 /* BabylonHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabylonHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879C2E2F1EBCEEDC00986674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,7 +107,6 @@
 		879C2E621EBCF1E000986674 /* PostsScreenTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsScreenTableViewController.swift; path = viewcontrollers/PostsScreenTableViewController.swift; sourceTree = "<group>"; };
 		879C2E681EBCF4AE00986674 /* BabylonHealthServiceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BabylonHealthServiceAPI.swift; path = controllers/BabylonHealthServiceAPI.swift; sourceTree = "<group>"; };
 		879C2E6A1EBCF6E500986674 /* PostObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostObject.swift; path = models/persistentModel/PostObject.swift; sourceTree = "<group>"; };
-		879C2E6E1EBD1DFA00986674 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostCell.swift; path = views/PostCell.swift; sourceTree = "<group>"; };
 		879C2E701EBD2A4500986674 /* CellTextPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellTextPresentable.swift; path = protocols/CellTextPresentable.swift; sourceTree = "<group>"; };
 		879C2E721EBD321300986674 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataSource.swift; path = datasource/DataSource.swift; sourceTree = "<group>"; };
 		879C2E751EBD330E00986674 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = protocols/Reusable.swift; sourceTree = "<group>"; };
@@ -194,6 +194,15 @@
 				872102F11EC4A70000F8AE4E /* comments.json */,
 			);
 			name = fixtures;
+			sourceTree = "<group>";
+		};
+		8760C9B91ECB53B90003F2B7 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				8760C9BD1ECB54490003F2B7 /* DetailCell.swift */,
+				8760C9BE1ECB54490003F2B7 /* PostCell.swift */,
+			);
+			name = cells;
 			sourceTree = "<group>";
 		};
 		879C2E1E1EBCEEDC00986674 = {
@@ -352,8 +361,7 @@
 		879C2E6D1EBD1C5300986674 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				879C2E6E1EBD1DFA00986674 /* PostCell.swift */,
-				8715E4571EC08132005EE564 /* DetailCell.swift */,
+				8760C9B91ECB53B90003F2B7 /* cells */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -707,6 +715,7 @@
 				879C2E691EBCF4AE00986674 /* BabylonHealthServiceAPI.swift in Sources */,
 				879C2E731EBD321300986674 /* DataSource.swift in Sources */,
 				87E809301EC2479C00DAD709 /* Provider.swift in Sources */,
+				8760C9BF1ECB54490003F2B7 /* DetailCell.swift in Sources */,
 				872102E21EC3CA7D00F8AE4E /* main.swift in Sources */,
 				87E809321EC27A4600DAD709 /* Comment.swift in Sources */,
 				8715E44E1EBDF667005EE564 /* ServiceRouter.swift in Sources */,
@@ -714,13 +723,12 @@
 				879C2E761EBD330E00986674 /* Reusable.swift in Sources */,
 				879C2E5B1EBCF07B00986674 /* AppDelegate.swift in Sources */,
 				879C2E6B1EBCF6E500986674 /* PostObject.swift in Sources */,
-				879C2E6F1EBD1DFA00986674 /* PostCell.swift in Sources */,
 				8715E45D1EC0B89D005EE564 /* Persistable.swift in Sources */,
 				8715E4521EC06D0E005EE564 /* UserObject.swift in Sources */,
 				87E809341EC27A5600DAD709 /* User.swift in Sources */,
 				876CA6FC1EC4E69F00A2EA78 /* DetailViewModel.swift in Sources */,
 				87E809361EC27A6C00DAD709 /* Post.swift in Sources */,
-				8715E4581EC08132005EE564 /* DetailCell.swift in Sources */,
+				8760C9C01ECB54490003F2B7 /* PostCell.swift in Sources */,
 				875300B31ECB42FB0067B317 /* DataRequest+Request.swift in Sources */,
 				8715E4541EC070BD005EE564 /* CommentObject.swift in Sources */,
 			);
