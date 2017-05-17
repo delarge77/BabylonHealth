@@ -40,6 +40,7 @@
 		879C2E731EBD321300986674 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E721EBD321300986674 /* DataSource.swift */; };
 		879C2E761EBD330E00986674 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E751EBD330E00986674 /* Reusable.swift */; };
 		879C2E7A1EBD4A0C00986674 /* DetailScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C2E791EBD4A0C00986674 /* DetailScreenViewController.swift */; };
+		87A81A451ECC519A0068F349 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87A81A431ECC50AC0068F349 /* Info.plist */; };
 		87B7F4311EC60A5300AA2854 /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B7F4301EC60A5300AA2854 /* DetailViewModelTests.swift */; };
 		87E809301EC2479C00DAD709 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8092F1EC2479C00DAD709 /* Provider.swift */; };
 		87E809321EC27A4600DAD709 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E809311EC27A4600DAD709 /* Comment.swift */; };
@@ -101,7 +102,6 @@
 		879C2E311EBCEEDC00986674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		879C2E341EBCEEDC00986674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		879C2E3B1EBCEEDC00986674 /* BabylonHealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabylonHealthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		879C2E411EBCEEDC00986674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		879C2E461EBCEEDC00986674 /* BabylonHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabylonHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		879C2E4A1EBCEEDC00986674 /* BabylonHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabylonHealthUITests.swift; sourceTree = "<group>"; };
 		879C2E4C1EBCEEDC00986674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +112,7 @@
 		879C2E721EBD321300986674 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataSource.swift; path = datasource/DataSource.swift; sourceTree = "<group>"; };
 		879C2E751EBD330E00986674 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = protocols/Reusable.swift; sourceTree = "<group>"; };
 		879C2E791EBD4A0C00986674 /* DetailScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailScreenViewController.swift; path = viewcontrollers/DetailScreenViewController.swift; sourceTree = "<group>"; };
+		87A81A431ECC50AC0068F349 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "resource files/Info.plist"; sourceTree = "<group>"; };
 		87B7F4301EC60A5300AA2854 /* DetailViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewModelTests.swift; path = viewmodels/DetailViewModelTests.swift; sourceTree = "<group>"; };
 		87E8092F1EC2479C00DAD709 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Provider.swift; path = controllers/Provider.swift; sourceTree = "<group>"; };
 		87E809311EC27A4600DAD709 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = models/Comment.swift; sourceTree = "<group>"; };
@@ -172,7 +173,7 @@
 		872102D91EC3C8EC00F8AE4E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				879C2E411EBCEEDC00986674 /* Info.plist */,
+				87A81A431ECC50AC0068F349 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -540,6 +541,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A81A451ECC519A0068F349 /* Info.plist in Resources */,
 				872102F01EC4A6CB00F8AE4E /* users.json in Resources */,
 				872102EE1EC4A5B000F8AE4E /* posts.json in Resources */,
 				872102F21EC4A70000F8AE4E /* comments.json in Resources */,
