@@ -24,7 +24,6 @@
 		873C03AD1ECC4936000B6C8E /* CommentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C03AA1ECC4936000B6C8E /* CommentObject.swift */; };
 		873C03AE1ECC4936000B6C8E /* PostObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C03AB1ECC4936000B6C8E /* PostObject.swift */; };
 		873C03AF1ECC4936000B6C8E /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C03AC1ECC4936000B6C8E /* UserObject.swift */; };
-		873C03B11ECC49AD000B6C8E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 873C03B01ECC49AD000B6C8E /* Info.plist */; };
 		875300B31ECB42FB0067B317 /* DataRequest+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875300B21ECB42FB0067B317 /* DataRequest+Request.swift */; };
 		8760C9BF1ECB54490003F2B7 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760C9BD1ECB54490003F2B7 /* DetailCell.swift */; };
 		8760C9C01ECB54490003F2B7 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760C9BE1ECB54490003F2B7 /* PostCell.swift */; };
@@ -532,7 +531,6 @@
 				879C2E351EBCEEDC00986674 /* LaunchScreen.storyboard in Resources */,
 				872102E61EC49C8000F8AE4E /* Localizable.strings in Resources */,
 				879C2E321EBCEEDC00986674 /* Assets.xcassets in Resources */,
-				873C03B11ECC49AD000B6C8E /* Info.plist in Resources */,
 				879C2E301EBCEEDC00986674 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
