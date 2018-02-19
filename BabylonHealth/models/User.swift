@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct User {
+struct User:Codable {
     
     let email: String
-    let userId: Int
+    let id: Int
     let name: String
     let phone: String
     let username: String

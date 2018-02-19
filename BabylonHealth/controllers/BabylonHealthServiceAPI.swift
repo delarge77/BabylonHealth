@@ -8,7 +8,6 @@
 
 import Foundation
 import Alamofire
-import ObjectMapper
 
 struct BabylonHealthServiceAPI {
     typealias PostsBlock = (APIResult<[Post]>) -> Void
@@ -19,19 +18,16 @@ struct BabylonHealthServiceAPI {
 
 extension BabylonHealthServiceAPI {
     func load(_ posts: URLRequestConvertible, completion: @escaping PostsBlock) {
-        Alamofire.request(posts).responseArray { json in
-            switch json {
-                case .success(let json):
-                    guard let postsObject = Mapper<PostObject>().mapArray(JSONObject: json) else {
-                        completion( .error( .jsonConversionFailure))
-                        return
-                    }
-                    let posts = postsObject.map {$0.post}
-                    completion( .success(posts))
-                case .error :
-                    completion( .error( .responseUnsuccessful))
-            }
-        }
+		
+		Alamofire.request(posts).responseData { json in
+			switch json {
+			case .success(let json):
+				let posts = try! JSONDecoder().decode([Post].self, from: json)
+				completion (.success(posts))
+			case .error:
+				completion (.error (.responseUnsuccessful))
+			}
+		}
     }
     
     func loadDetails(userConvertible: URLRequestConvertible,
@@ -79,28 +75,23 @@ extension BabylonHealthServiceAPI {
     }
     
     func load(user: URLRequestConvertible, completion: @escaping UserDetailsBlock) {
-        Alamofire.request(user).responseArray { json in
-            switch json {
-                case .success(let json):
-                    guard let userObject = Mapper<UserObject>().map(JSONObject: json.firstObject) else {
-                        completion( .error( .jsonConversionFailure))
-                        return
-                    }
-                    completion( .success(userObject.user))
-                case .error :
-                    completion( .error( .responseUnsuccessful))
-            }
-        }
+		
+		Alamofire.request(user).responseData { json in
+			switch json {
+				case .success(let json):
+					let user = try! JSONDecoder().decode([User].self, from: json)
+					completion (.success(user[0]))
+				case .error :
+					completion( .error( .responseUnsuccessful))
+			}
+		}
     }
     
     func load(comments: URLRequestConvertible, completion: @escaping CommentsBlock) {
-        Alamofire.request(comments).responseArray { json in
+        Alamofire.request(comments).responseData { json in
             switch json {
                 case .success(let json):
-                    guard let commentObjects = Mapper<CommentObject>().mapArray(JSONObject: json) else {
-                        return
-                    }
-                    let comments = commentObjects.map {$0.comment}
+					let comments = try! JSONDecoder().decode([Comment].self, from: json)
                     completion( .success(comments))
                 case .error :
                     completion( .error( .responseUnsuccessful))

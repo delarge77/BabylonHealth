@@ -13,15 +13,15 @@ struct DetailViewModel {
     static func loadDetails(post: Post, completion:@escaping (Detail?) -> Void) {
         let provider = Provider()
         provider.loadDetailsFrom(post: post) { result in
-            
+
             guard let result = result else {
                 completion(nil)
                 return
             }
-            
+			
             let name = formatUserName(result)
             let numberOfCommentsText = numberOfComments(result)
-            
+			
             let detailModel = Detail(name: name, comments: result.comments, postDescription: post.body, numberCommentsText: numberOfCommentsText)
             completion(detailModel)
         }

@@ -32,4 +32,23 @@ extension DataRequest {
             }
         }
     }
+	
+	@discardableResult
+	func responseData(completion: @escaping (APIResult<Data>) -> Void) -> Self {
+		return responseJSON { response in
+			guard let httpResponse = response.response else {
+				completion( .error( .requestFailed))
+				return
+			}
+			if httpResponse.statusCode == 200 {
+				if let data = response.data {
+					completion( .success(data))
+				} else {
+					completion( .error( .responseUnsuccessful))
+				}
+			} else {
+				completion( .error( .responseUnsuccessful))
+			}
+		}
+	}
 }

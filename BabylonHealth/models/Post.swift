@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct Post {
+struct Post:Codable {
     
     let userId: Int
-    let postId: Int
+    let id: Int
     let title: String
     let body: String
 }

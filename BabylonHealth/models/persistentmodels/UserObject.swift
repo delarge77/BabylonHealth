@@ -7,36 +7,30 @@
 //
 
 import Foundation
-import ObjectMapper
 import RealmSwift
-import ObjectMapper_Realm
 
-class UserObject: Object, Mappable {
-    
-    dynamic var email = ""
-    dynamic var userId = 0
-    dynamic var name = ""
-    dynamic var phone = ""
-    dynamic var username = ""
-    dynamic var website = ""
-    
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
+class UserObject: Object {
+	
+    @objc dynamic var email = ""
+    @objc dynamic var userId = 0
+    @objc dynamic var name = ""
+    @objc dynamic var phone = ""
+    @objc dynamic var username = ""
+    @objc dynamic var website = ""
+	
     convenience init(user: User) {
         self.init()
         email = user.email
-        userId = user.userId
+        userId = user.id
         name = user.name
         phone = user.phone
         username = user.username
         website = user.website
     }
-    
+	
     var user: User {
         return User(email: email,
-                    userId: userId,
+                    id: userId,
                     name: name,
                     phone: phone,
                     username: username,
@@ -46,13 +40,5 @@ class UserObject: Object, Mappable {
     override class func primaryKey() -> String? {
         return "userId"
     }
-    
-    func mapping(map: Map) {
-        email <- map["email"]
-        userId <- map["id"]
-        name <- map["name"]
-        phone <- map["phone"]
-        username <- map["username"]
-        website <- map["website"]
-    }
 }
+

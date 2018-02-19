@@ -32,7 +32,7 @@ struct Provider: Persistable {
     }
     
     func loadDetailsFrom(post: Post, completion:@escaping (CompoundDetail?) -> Void) {
-        service.loadDetails(userConvertible: ServiceRouter.searchUser(userId: post.userId), commentsConvertible: ServiceRouter.comments(postId: post.postId)) { result in
+        service.loadDetails(userConvertible: ServiceRouter.searchUser(userId: post.userId), commentsConvertible: ServiceRouter.comments(postId: post.id)) { result in
             
             switch result {
             case .success(let response):
@@ -43,10 +43,10 @@ struct Provider: Persistable {
                     completion(response)
                 case .error:
                     guard let user = self.getUserById(userId: post.userId) else {
-                        completion(nil)
+						completion(nil)
                         return
                     }
-                    guard let comments = self.getCommentsByPostId(postId: post.postId) else {
+                    guard let comments = self.getCommentsByPostId(postId: post.id) else {
                         completion(nil)
                         return
                     }

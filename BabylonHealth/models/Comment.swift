@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct Comment {
+struct Comment:Codable {
     
     let postId: Int
-    let userId: Int
+    let id: Int
     let name: String
     let email: String
     let body: String
