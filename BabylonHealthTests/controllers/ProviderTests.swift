@@ -79,7 +79,7 @@ class ProviderTests: XCTestCase {
     func testConnectionForRequestingDetails() {
         let expec = expectation(description: "")
         
-        let post = Post(userId: 1, postId: 1, title: "hsduhaduh", body: "sdjaisajdisajd")
+        let post = Post(userId: 1, id: 1, title: "hsduhaduh", body: "sdjaisajdisajd")
         
         provider.loadDetailsFrom(post: post) { response in
             XCTAssertNotNil(response, "must not be nil")
@@ -100,7 +100,7 @@ class ProviderTests: XCTestCase {
             return OHHTTPStubsResponse(jsonObject:[], statusCode:404, headers:nil)
         }
         
-        let post = Post(userId: 1, postId: 1, title: "hsduhaduh", body: "sdjaisajdisajd")
+        let post = Post(userId: 1, id: 1, title: "hsduhaduh", body: "sdjaisajdisajd")
         
         provider.loadDetailsFrom(post: post) { response in
             XCTAssertNotNil(response, "must not be nil")
@@ -121,7 +121,7 @@ class ProviderTests: XCTestCase {
             return OHHTTPStubsResponse(jsonObject:[], statusCode:404, headers:nil)
         }
         
-        let post = Post(userId: 0, postId: 1, title: "hsduhaduh", body: "sdjaisajdisajd")
+        let post = Post(userId: 0, id: 1, title: "hsduhaduh", body: "sdjaisajdisajd")
         
         provider.loadDetailsFrom(post: post) { response in
             XCTAssertNil(response, "must be nil")
@@ -141,9 +141,9 @@ class ProviderTests: XCTestCase {
         stub(condition: isHost("jsonplaceholder.typicode.com")) { _ in
             return OHHTTPStubsResponse(jsonObject:[], statusCode:404, headers:nil)
         }
-        
-        let post = Post(userId: 1, postId: 0, title: "hsduhaduh", body: "sdjaisajdisajd")
-        
+		
+		let post = Post(userId: 1, id: 0, title: "hsduhaduh", body: "sdjaisajdisajd")
+		
         provider.loadDetailsFrom(post: post) { response in
             XCTAssertEqual(response?.comments.count, 0, "Value must be 0")
             expec.fulfill()

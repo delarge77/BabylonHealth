@@ -971,6 +971,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = LZASXEKJ7F;
 				INFOPLIST_FILE = "$(SRCROOT)/BabylonHealthTests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.delarge.BabylonHealthTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -989,6 +990,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = LZASXEKJ7F;
 				INFOPLIST_FILE = "$(SRCROOT)/BabylonHealthTests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.delarge.BabylonHealthTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

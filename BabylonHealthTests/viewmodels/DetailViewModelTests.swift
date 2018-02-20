@@ -14,9 +14,9 @@ class DetailViewModelTests: XCTestCase {
     func testShouldCreateDetailModel() {
         
         let expec = expectation(description: "")
-        
+		
         let post = Post(userId: 1,
-                     postId: 1,
+                     id: 1,
                      title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
                      body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto")
         
@@ -34,8 +34,9 @@ class DetailViewModelTests: XCTestCase {
     }
     
     func testShouldFormatDetailInformation() {
-        let user = User(email: "", userId: 1, name: "", phone: "", username: "", website: "")
-        let comment = Comment(postId: 1, userId: 1, name: "", email: "", body: "")
+		
+		let user = User(email: "", id: 1, name: "", phone: "", username: "", website: "")
+		let comment = Comment(postId: 1, id: 1, name: "", email: "", body: "")
         let detail = CompoundDetail(user, [comment])
         let formatUserName = DetailViewModel.formatUserName(detail)
         XCTAssertNotNil(formatUserName, "detail can not be nil")
